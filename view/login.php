@@ -19,11 +19,10 @@
         <meta property="og:image" content="">
 
         <!-- Icons -->
-        <link rel="shortcut icon" href="../public/Template/assets/img/favicons/favicon.png"> 
-        <link rel="icon" type="image/png" sizes="192x192" href="../public/Template/assets/img/favicons/favicon-192x192.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="../public/Template/assets/img/favicons/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="../public/assets/img/favicons/favicon-192x192.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../public/assets/img/favicons/apple-touch-icon-180x180.png">
 
-        <link rel="stylesheet" id="css-main" href="../public/Template/assets/css/codebase.min.css">
+        <link rel="stylesheet" id="css-main" href="public/assets/css/codebase.min.css">
 
       
     </head>
@@ -33,7 +32,7 @@
             <!-- Main Container -->
             <main id="main-container">
                 <!-- Page Content -->
-                <div class="bg-image" style="background-image: url('../public/Template/assets/img/login_wallpaper.jpg');">
+                <div class="bg-image" style="background-image: url('public/assets/img/login_wallpaper.jpg');">
                     <div class="row mx-0 bg-black-op">
                         <div class="hero-static col-md-6 col-xl-8 d-none d-md-flex align-items-md-end">
                             <div class="p-30 invisible" data-toggle="appear">
@@ -95,20 +94,20 @@
         <!-- END Page Container -->
 
         <!-- Codebase Core JS -->
-        <script src="../public/Template/assets/js/core/jquery.min.js"></script>
-        <script src="../public/Template/assets/js/core/popper.min.js"></script>
-        <script src="../public/Template/assets/js/core/bootstrap.min.js"></script>
-        <script src="../public/Template/assets/js/core/jquery.slimscroll.min.js"></script>
-        <script src="../public/Template/assets/js/core/jquery.scrollLock.min.js"></script>
-        <script src="../public/Template/assets/js/core/jquery.appear.min.js"></script>
-        <script src="../public/Template/assets/js/core/jquery.countTo.min.js"></script>
-        <script src="../public/Template/assets/js/core/js.cookie.min.js"></script>
-        <script src="../public/Template/assets/js/codebase.js"></script>
+        <script src="public/assets/js/core/jquery.min.js"></script>
+        <script src="public/assets/js/core/popper.min.js"></script>
+        <script src="public/assets/js/core/bootstrap.min.js"></script>
+        <script src="public/assets/js/core/jquery.slimscroll.min.js"></script>
+        <script src="public/assets/js/core/jquery.scrollLock.min.js"></script>
+        <script src="public/assets/js/core/jquery.appear.min.js"></script>
+        <script src="public/assets/js/core/jquery.countTo.min.js"></script>
+        <script src="public/assets/js/core/js.cookie.min.js"></script>
+        <script src="public/assets/js/codebase.js"></script>
 
         <!-- Page JS Plugins -->
-        <script src="../public/Template/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
+        <script src="public/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
 
         <!-- Page JS Code -->
-        <script src="../public/Template/assets/js/pages/op_auth_signin.js"></script>
+        <script src="public/assets/js/pages/op_auth_signin.js"></script>
     </body>
 </html>
