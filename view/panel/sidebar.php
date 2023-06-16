@@ -26,7 +26,7 @@
 
                                 <!-- Logo -->
                                 <div class="content-header-item">
-                                    <a class="link-effect font-w700" href="index.html">
+                                    <a class="link-effect font-w700" href="index.php?c=Home&a=mostrarHome">
                                         <i class="si si-plane text-primary"></i>
                                         <span class="font-size-xl text-dual-primary-dark">Travel</span><span class="font-size-xl text-primary">connect</span>
                                     </a>
@@ -63,7 +63,8 @@
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a class="link-effect text-dual-primary-dark" href="index.php?c=login&a=salirLogin">
+                                        <a class="link-effect text-dual-primary-dark" 
+                                            href="index.php?c=login&a=salirLogin">
                                             <i class="si si-logout"></i>
                                         </a>
                                     </li>
@@ -79,50 +80,105 @@
                                 
                                 <li class="nav-main-heading">
                                     <span class="sidebar-mini-visible">
-                                        UI</span><span class="sidebar-mini-hidden">Módulos</span></li>
+                                        UI</span><span class="sidebar-mini-hidden">Gestión de Reservas</span></li>
                                 <li>
+
+                                <!-- <li>
+                                    <a href="index.php?c=Reservas&a=view_reservas">
+                                        <i class="si si-layers"></i>
+                                        <span class="sidebar-mini-hide">Gestión de Reserva</span>
+                                    </a>
+                                </li> -->
+                                 <li>
+                                <a class="nav-submenu" data-toggle="nav-submenu" href="#">
+                                        <i class="si si-layers"></i>
+                                        <span class="sidebar-mini-hide">Reservas</span>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="index.php?c=Reservas&a=new_reservas">Nueva reserva</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a href="index.php?c=Reservas&a=view_reservas">Registro de reservas</a>
+                                        </li>
+                                      
+                                    </ul>
+                                    </li>
 
                                 <li>
                                     <a href="#">
-                                        <i class="si si-compass"></i>
-                                        <span class="sidebar-mini-hide">Gestión de Reservas</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="si si-compass"></i>
+                                        <i class="si si-doc"></i>
                                         <span class="sidebar-mini-hide">Factura</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
-                                        <i class="si si-compass"></i>
+                                    <a href="index.php?c=Clientes&a=view_clientes">
+                                        <i class="si si-users"></i>
                                         <span class="sidebar-mini-hide">Administración de Clientes</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="si si-compass"></i>
-                                        <span class="sidebar-mini-hide">Gestión inventarios</span>
-                                    </a>
+
+                                <li class="nav-main-heading">
+                                    <span class="sidebar-mini-visible">
+                                        UI</span><span class="sidebar-mini-hidden">Gestión de inventarios</span>
                                 </li>
 
-
-
-                                   <!--  <a class="nav-submenu" data-toggle="nav-submenu" href="#">
-                                        <i class="si si-puzzle"></i>
-                                        <span class="sidebar-mini-hide">Gestión de Reservas</span>
-                                    </a>
-                                    <ul>
-                                        <li>
-                                            <a href="be_blocks.html">1</a>
-                                        </li>
+                                <li>
+                                    <li>
+                                        <a class="nav-submenu" data-toggle="nav-submenu" href="#">
+                                            <i class="si si-home"></i>
+                                            <span class="sidebar-mini-hide">Hotel</span>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a href="index.php?c=Hotel&a=new_hoteles">Agregar nuevo</a>
+                                            </li>
                                     
-                                        <li>
-                                            <a href="be_blocks_tiles.html">2</a>
-                                        </li>
-                                      
-                                    </ul> -->
+                                            <li>
+                                                <a href="index.php?c=Hotel&a=view_hoteles">Lista de Hoteles</a>
+                                            </li>                                   
+                                        </ul>
+                                    </li>
+                                </li>
+
+                                <li>
+                                    <li>
+                                        <a class="nav-submenu" data-toggle="nav-submenu" href="#">
+                                            <i class="si si-plane"></i>
+                                            <span class="sidebar-mini-hide">Vuelo</span>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a href="index.php?c=Vuelo&a=new_vuelos">Agregar nuevo</a>
+                                            </li>
+                                            <li>
+                                                <a href="index.php?c=Vuelo&a=new_aerolinea">Añadir Aerolinea</a>
+                                            </li>
+                                    
+                                            <li>
+                                                <a href="index.php?c=Vuelo&a=view_vuelos">Lista de Vuelos</a>
+                                            </li>                                   
+                                        </ul>
+                                    </li>
+                                </li>
+
+                                <li>
+                                    <li>
+                                        <a class="nav-submenu" data-toggle="nav-submenu" href="#">
+                                            <i class="si si-briefcase"></i>
+                                            <span class="sidebar-mini-hide">Paquetes</span>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a href="index.php?c=Paquetes&a=new_paquetes">Agregar nuevo</a>
+                                            </li>
+                                    
+                                            <li>
+                                                <a href="index.php?c=Paquetes&a=view_paquetes">Lista de Paquetes</a>
+                                            </li>                                   
+                                        </ul>
+                                    </li>
                                 </li>
 
                                 

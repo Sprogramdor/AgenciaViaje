@@ -1,12 +1,8 @@
   <!-- Footer -->
   <footer id="page-footer" class="opacity-0">
                 <div class="content py-20 font-size-xs clearfix">
-                    <div class="float-right">
-                        Crafted with <i class="fa fa-heart text-pulse"></i> by <a class="font-w600" href="http://goo.gl/vNS3I" target="_blank">pixelcave</a>
-                    </div>
-                    <div class="float-left">
-                        <a class="font-w600" href="https://goo.gl/po9Usv" target="_blank">Codebase 1.3</a> &copy; <span class="js-year-copy">2017</span>
-                    </div>
+                   
+                  
                 </div>
             </footer>
             <!-- END Footer -->
@@ -23,5 +19,12 @@
         <script src="public/assets/js/core/jquery.countTo.min.js"></script>
         <script src="public/assets/js/core/js.cookie.min.js"></script>
         <script src="public/assets/js/codebase.js"></script>
+
+        <!-- Page JS Plugins -->
+        <script src="public/assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="public/assets/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+
+        <!-- Page JS Code -->
+        <script src="public/assets/js/pages/be_tables_datatables.js"></script>
     </body>
 </html>

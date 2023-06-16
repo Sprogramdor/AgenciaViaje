@@ -48,7 +48,7 @@
                             <div class="content content-full">
                                 <!-- Header -->
                                 <div class="px-30 py-10">
-                                    <a class="link-effect font-w700" href="index.html">
+                                    <a class="link-effect font-w700" href="">
                                         <i class="si si-plane fa-2x"></i>
                                         <span class="font-size-xl text-primary-dark">Travel</span><span class="font-size-xl"> Connect</span>
                                     </a>
@@ -61,16 +61,16 @@
                                     <div class="form-group row">
                                         <div class="col-12">
                                             <div class="form-material floating">
-                                                <input type="text" class="form-control" id="correo" name="correo">
-                                                <label for="correo">Usuario</label>
+                                                <input type="text" class="form-control" id="login-username" name="login-username">
+                                                <label for="login-username">Usuario</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-12">
                                             <div class="form-material floating">
-                                                <input type="password" class="form-control" id="pass" name="pass">
-                                                <label for="pass">Contraseña</label>
+                                                <input type="password" class="form-control" id="login-password" name="login-password">
+                                                <label for="login-password">Contraseña</label>
                                             </div>
                                         </div>
                                     </div>

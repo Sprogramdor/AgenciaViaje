@@ -39,7 +39,9 @@
         <!-- END Icons -->
  
         <link rel="stylesheet" id="css-main" href="public/assets/css/codebase.min.css">
-
+        <!-- Stylesheets -->
+        <!-- Page JS Plugins CSS -->
+        <link rel="stylesheet" href="public/assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
        
     </head>
     <body>
@@ -60,12 +62,7 @@
                         </button>
                         <!-- END Toggle Sidebar -->
 
-                        <!-- Open Search Section -->
-                        <!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
-                        <button type="button" class="btn btn-circle btn-dual-secondary" data-toggle="layout" data-action="header_search_on">
-                            <i class="fa fa-search"></i>
-                        </button>
-                        <!-- END Open Search Section -->
+                        
 
                         <!-- Layout Options (used just for demonstration) -->
                         <!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
@@ -82,9 +79,7 @@
                                     <button type="button" class="btn btn-sm btn-block btn-alt-secondary mb-10" data-toggle="layout" data-action="content_layout_toggle">Toggle Layout</button>
                                 </div>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="be_layout_api.html">
-                                    <i class="si si-chemistry"></i> All Options (API)
-                                </a>
+                                
                             </div>
                         </div>
                         <!-- END Layout Options -->
@@ -100,12 +95,12 @@
                         <!-- User Dropdown -->
                         <div class="btn-group" role="group">
                             <button type="button" class="btn btn-rounded btn-dual-secondary" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <?php echo $_SESSION['agente']; echo $_SESSION['apellido'];?><i class="fa fa-angle-down ml-5"></i>
+                            Usuario Agente<i class="fa fa-angle-down ml-5"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right min-width-150" aria-labelledby="page-header-user-dropdown">
                                 <a class="dropdown-item" href="#">
-                                    <i class="si si-user mr-5"></i> Correo <br>
-                                    <?php echo $_SESSION['user'];?>
+                                    <i class="si si-user si-2x mr-5" style="color:#42a5f5;font-size: 17px;"></i> <strong class="fw-bold">Nombre: </strong><?php echo $_SESSION['agente']; echo $_SESSION['apellido'];?><br>
+                                    <i class="si si-envelope mr-5" style="color:#42a5f5;font-size: 17px;"></i> <strong class="fw-bold">Correo: </strong> <?php echo $_SESSION['user'];?>
                                 </a>
                                
                                 
@@ -119,8 +114,8 @@
                                 <!-- END Side Overlay -->
 
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="op_auth_signin.html">
-                                    <i class="si si-logout mr-5"></i> Sign Out
+                                <a class="dropdown-item" href="index.php?c=login&a=salirLogin">
+                                    <i class="si si-logout mr-5"></i> Cerrar Sesión
                                 </a>
                             </div>
                         </div>

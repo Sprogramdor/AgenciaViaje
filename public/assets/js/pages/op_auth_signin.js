@@ -32,12 +32,12 @@ var OpAuthSignIn = function() {
             },
             messages: {
                 'login-username': {
-                    required: 'Please enter a username',
-                    minlength: 'Your username must consist of at least 3 characters'
+                    required: 'Por favor, ingrese el correo                    ',
+                    minlength: 'Su correo debe constar de al menos 3 caracteres'
                 },
                 'login-password': {
-                    required: 'Please provide a password',
-                    minlength: 'Your password must be at least 5 characters long'
+                    required: 'Por favor proporcione una contraseña                    ',
+                    minlength: 'Tu contraseña debe tener al menos 5 caracteres'
                 }
             }
         });

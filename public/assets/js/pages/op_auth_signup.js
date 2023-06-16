@@ -43,7 +43,7 @@ var OpAuthSignUp = function() {
             },
             messages: {
                 'signup-username': {
-                    required: 'Please enter a username',
+                    required: 'por favor, ingrese un nombre de usuario',
                     minlength: 'Your username must consist of at least 3 characters'
                 },
                 'signup-email': 'Please enter a valid email address',

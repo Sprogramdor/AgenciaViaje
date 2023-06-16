@@ -19,10 +19,10 @@ class LoginController {
   public function Agente(){
     $errores = '';
 
-    if(!empty($_POST['correo']) && !empty($_POST['pass'])){
+    if(!empty($_POST['login-username']) && !empty($_POST['login-password'])){
 
-        $correo = htmlentities($_POST['correo']);
-        $pass = htmlentities($_POST['pass']);
+        $correo = htmlentities($_POST['login-username']);
+        $pass = htmlentities($_POST['login-password']);
    
         $agente = $this->model->Agente_list($correo, $pass);
 
