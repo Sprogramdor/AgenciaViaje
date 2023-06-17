@@ -106,18 +106,40 @@
                                     </ul>
                                     </li>
 
-                                <li>
+                              <!--   <li>
                                     <a href="#">
                                         <i class="si si-doc"></i>
                                         <span class="sidebar-mini-hide">Factura</span>
                                     </a>
-                                </li>
-                                <li>
+                                </li> -->
+                               <!--  <li>
                                     <a href="index.php?c=Clientes&a=view_clientes">
                                         <i class="si si-users"></i>
-                                        <span class="sidebar-mini-hide">Administración de Clientes</span>
+                                        <span class="sidebar-mini-hide"></span>
                                     </a>
                                 </li>
+ -->
+                                <li>
+                                    <li>
+                                        <a class="nav-submenu" data-toggle="nav-submenu" href="#">
+                                            <i class="si si-users"></i>
+                                            <span class="sidebar-mini-hide">Administración de Clientes</span>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a href="index.php?c=Clientes&a=view_clientes">Consultar</a>
+                                            </li>
+                                    
+                                            <li>
+                                                <a href="">Factura</a>
+                                            </li>                                   
+                                        </ul>
+                                    </li>
+                                </li>
+
+
+
+
 
                                 <li class="nav-main-heading">
                                     <span class="sidebar-mini-visible">

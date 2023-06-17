@@ -42,6 +42,8 @@
         <!-- Stylesheets -->
         <!-- Page JS Plugins CSS -->
         <link rel="stylesheet" href="public/assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
+
+        <link rel="stylesheet" href="https://cdn.datatables.net/select/1.6.2/css/select.dataTables.min.css">
        
     </head>
     <body>

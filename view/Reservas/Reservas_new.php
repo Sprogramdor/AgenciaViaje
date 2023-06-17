@@ -9,24 +9,24 @@
       <div class="col-xl-12">
           
         <div class="block block-themed">
-            <div class="block-header bg-gd-aqua">
-                <h3 class="block-title">Formulario de reservas</h3>
-
-                <div class="block-options">
-                    <button type="button" class="btn-block-option" data-toggle="block-option" data-action="content_toggle"></button>
-                </div>
+            <div class="block-header bg-gd-sea">
+                <h3 class="block-title">Registro del Cliente</h3>
             </div>
                                
-            <div class="block-content">
+        <div class="block-content">
                 <div class="row justify-content-center py-20">
                     <div class="col-xl-6">
-                        <h2 class="block-title mb-3" style="font-weight:bold;">Registro del Cliente</h2>
-                               
-                                    <!-- jQuery Validation (.js-validation-bootstrap class is initialized in js/pages/be_forms_validation.js) -->
-                                    <!-- For more examples you can check out https://github.com/jzaefferer/jquery-validation -->
-            <form class="js-validation-bootstrap" action="#" method="post">
+                                                                                 
+            <form class="js-validation-bootstrap" action="index.php?c=Reservas&a=view_servicios_reservas" method="post">
+            <div class="form-group row">
+                    <label class="col-lg-4 col-form-label" for="fecha_creacion">Fecha de Creación</label>
+                    <div class="col-lg-6">
+                        <input type="date" class="form-control" id="fecha_creacion" name="fecha_creacion">
+                    </div>
+                </div>  
 
-                <div class="form-group row">
+            
+              <!--   <div class="form-group row">
                    
                     <label class="col-lg-4 col-form-label" for="val-username">Nombres <span class="text-danger">*</span></label>
                     <div class="col-lg-8">
@@ -40,6 +40,8 @@
                         <input type="text" class="form-control" id="val-username" name="val-username" placeholder="Digite los apellidos..">
                     </div>
                 </div>
+
+
 
                 <div class="form-group row">
                     <label class="col-lg-4 col-form-label" for="val-email">Correo <span class="text-danger">*</span></label>
@@ -77,7 +79,7 @@
                 <div class="form-group row">
                     <label class="col-lg-4 col-form-label" for="val-suggestions">Dirección <span class="text-danger">*</span></label>
                     <div class="col-lg-8">
-                        <textarea class="form-control" id="val-suggestions" name="val-suggestions" rows="2" placeholder="Ingrese la dirección.."></textarea>
+                        <input type="text" class="form-control" id="val-suggestions" name="val-suggestions" placeholder="Ingrese la dirección..">
                     </div>
                 </div> 
 
@@ -86,32 +88,101 @@
                     <div class="col-lg-6">
                         <input type="date" class="form-control" id="fecha_creacion" name="fecha_creacion">
                     </div>
-                </div>  
+                </div>   -->
+                
+                <div class="row">
+                            <div class="col-6">
+                                 <div class="form-group">                                  
+                                    <div class="form-material floating">
+                                        <input class="form-control" type="text" id="wizard-validation-material-firstname" name="wizard-validation-material-firstname">
+                                        <label for="wizard-validation-material-firstname">Nombres</label>
+                                    </div>
+                                </div>
+                            </div>
+                             
+                            <div class="col-6">
+                                <div class="form-group"> 
+                                    <div class="form-material floating">
+                                        <input class="form-control" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname">
+                                        <label for="wizard-validation-material-lastname">Apellidos</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="form-group row">
-                <label class="col-lg-4 col-form-label" for="val-select2">Tipo de Servicio <span class="text-danger">*</span></label>
-                    <div class="col-lg-8">
-                    <select class="js-select2 form-control" id="val-select2" name="val-select2" style="width: 100%;" data-placeholder="Choose one..">
-                     <option value="">Selecione una opcion</option>
-                        <option value="html">Hotel</option>
-                        <option value="css">Vuelo</option>
-                        <option value="javascript">Paquetes</option>                    
-                    </select>
-                    </div>
-                </div> 
-                                   
-                                        
+                        <div class="row">               
+                                <div class="col-6">
+                                            <div class="form-group">
+                                                <div class="form-material floating">
+                                                    <input class="form-control" type="email" id="wizard-validation-material-email" name="wizard-validation-material-email">
+                                                    <label for="wizard-validation-material-email">Correo</label>
+                                                </div>
+                                            </div>
+                                </div>
+                                            <div class="col-6">
+                                            <div class="form-group">
+                                                <div class="form-material floating">
+                                                    <input class="form-control" type="text" id="wizard-validation-material-number" name="wizard-validation-material-number">
+                                                    <label for="wizard-validation-material-number">Cédula</label>
+                                                </div>
+                                            </div>
+                                            </div>
+                        </div>
+
+                        <div class="row">
+                        <div class="col-6">
+                                            <div class="form-group">
+                                                <div class="form-material floating">
+                                                    <input class="form-control" type="text" id="wizard-validation-material-numberT" name="wizard-validation-material-numberT">
+                                                    <label for="wizard-validation-material-numberT">Telefono</label>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            <div class="col-6">
+                                            <div class="form-group">
+                                                <div class="form-material floating">
+                                                    <select class="form-control" id="wizard-validation-material-skills" name="wizard-validation-material-skills" size="1">
+                                                        <option> Seleccione una opcion</option><!-- Empty value for demostrating material select box -->
+                                                        <option value="1">Guayaquil</option>
+                                                        <option value="2">Quito</option>
+                                                        <option value="3">Cuenca</option>
+            
+                                                    </select>
+                                                    <label for="wizard-validation-material-skills">Destino</label>
+                                                </div>
+                                            </div>
+                        </div>                    
+                        </div>
+                                            <div class="form-group">
+                                                <div class="form-material floating">
+                                                    <input class="form-control" type="text" id="wizard-validation-material-location" name="wizard-validation-material-location">
+                                                    <label for="wizard-validation-material-location">Dirección</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="form-group ">
+                                            <div class="form-material floating">
+                                                <input class="form-control" type="date" id="wizard-validation-material-location" name="wizard-validation-material-location">
+                                                <label for="wizard-validation-material-location">Fecha de Creación</label>
+                    
+                                            </div>                                           
+                                             </div>  -->
+                                            
+<br>
                 <div class="form-group row">
                     <div class="col-lg-8 ml-auto">
-                        <button type="submit" class="btn btn-alt-primary">Guardar</button>
+                        <button type="submit" class="btn btn-alt-primary">Continuar</button>
                     </div>
-                </div>
-                                    
-            </form>
+                </div>                                 
+            </form> 
 
-            </div>
-            </div>
-            </div>
+
+        
+                
+
+                  
+                                <!-- END Form -->
+                            
                
         </div>  <!-- END  -->
     </div>

@@ -134,6 +134,15 @@ var BeFormWizard = function() {
                     required: true,
                     email: true
                 },
+                'wizard-validation-material-number': {
+                    required: true,
+                    number: true
+                },
+                'wizard-validation-material-numberT': {
+                    required: true,
+                    number: true,
+                    minlength: 10
+                },
                 'wizard-validation-material-bio': {
                     required: true,
                     minlength: 5
@@ -150,16 +159,18 @@ var BeFormWizard = function() {
             },
             messages: {
                 'wizard-validation-material-firstname': {
-                    required: 'Please enter a firstname',
-                    minlength: 'Your firtname must consist of at least 2 characters'
+                    required: 'Por favor ingrese un nombre',
+                    minlength: 'Su nombre debe constar de al menos 2 caracteres'
                 },
                 'wizard-validation-material-lastname': {
-                    required: 'Please enter a lastname',
-                    minlength: 'Your lastname must consist of at least 2 characters'
+                    required: 'Por favor ingrese un apellido',
+                    minlength: 'Su apellido debe constar de al menos 2 caracteres'
                 },
-                'wizard-validation-material-email': 'Please enter a valid email address',
+                'wizard-validation-material-email': 'Por favor, introduce una dirección de correo electrónico válida',
+                'wizard-validation-material-number': '¡Por favor, introduzca un número!',
+                'wizard-validation-material-numberT': '¡Por favor, introduzca un número de 10 digitos!',
                 'wizard-validation-material-bio': 'Let us know a few thing about yourself',
-                'wizard-validation-material-skills': 'Please select a skill!',
+                'wizard-validation-material-skills': '¡Selecciona una opcion!',
                 'wizard-validation-material-terms': 'You must agree to the service terms!'
             }
         });

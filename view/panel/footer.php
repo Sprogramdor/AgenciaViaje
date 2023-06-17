@@ -24,7 +24,20 @@
         <script src="public/assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
         <script src="public/assets/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
 
+
+        <!-- Page JS Plugins -->
+        <script src="public/assets/js/plugins/bootstrap-wizard/jquery.bootstrap.wizard.js"></script>
+        <script src="public/assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
+        <script src="public/assets/js/plugins/jquery-validation/additional-methods.min.js"></script>
+
+         <!-- Page JS Code -->
+       <!--   <script src="public/assets/js/pages/be_forms_wizard.js"></script> -->
+
         <!-- Page JS Code -->
         <script src="public/assets/js/pages/be_tables_datatables.js"></script>
+
+        <!-- SELECT TABLA -->
+        <script src="https://cdn.datatables.net/select/1.6.2/js/dataTables.select.min.js"></script>
+       
     </body>
 </html>

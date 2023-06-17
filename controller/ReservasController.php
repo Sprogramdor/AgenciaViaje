@@ -20,6 +20,20 @@ class ReservasController
     {
         require_once 'view/Reservas/Reservas_list.php';
     }
+
+    public function view_servicios_reservas()
+    {
+        require_once 'view/Reservas/Reservas_servicios.php';
+    }
+
+    public function view_detalles_reservas()
+    {
+        require_once 'view/Reservas/Reservas_detalles.php';
+    }
+    public function view_factura_reservas()
+    {
+        require_once 'view/Reservas/Reservas_factura.php';
+    }
     
     
 }
