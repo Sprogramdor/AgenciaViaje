@@ -15,16 +15,17 @@
 
         <div class="block-content block-content-full">
                             <!-- DataTables init on table by adding .js-dataTable-full class, functionality initialized in js/pages/be_tables_datatables.js -->
-            <table id="example" class="table table-bordered table-striped table-vcenter js-dataTable-full">
+            <table id="S_side" class="table table-bordered table-striped table-vcenter js-dataTable-full">
                 <thead>
                     <tr>
-                        <th class="text-center">N°</th>
+                        <!-- <th class="text-center">N°</th> -->
                         <th>Nombre</th>
                         <th class="d-none d-sm-table-cell">Valoración</th>
                         <th class="text-center">Dirección</th>
                         <th class="text-center">Precio</th>
                         <th class="text-center">Destino</th>
                         <th class="text-center">Acciones</th>
+                        
                     </tr>
                 </thead>
 
@@ -35,8 +36,6 @@
             </table>
         </div>
     </div>
-                    <!-- END Dynamic Table Full -->
-
 
 
       </div>
@@ -44,15 +43,19 @@
 </div>
 
 </main>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
 <script>
  $(document).ready(function(){ 
 
-var table = $('#example').DataTable({
+    var table = $('#S_side').DataTable({
 		"aProcessing": true,//Activamos el procesamiento del datatables
  	    "aServerSide": true,//Paginación y filtrado realizados por el servidor 
 	
         "ajax":{
-            url: 'index.php?c=Hotel&a=Lista',
+            url: 'index.php?c=Hotel&a=Lista_hoteles',
             type : "get",
         },
         "bDestroy": true,
@@ -84,9 +87,76 @@ var table = $('#example').DataTable({
                 "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
                 "sSortDescending": ": Activar para ordenar la columna de manera descendente"
             }
-		}
+		},
+        
 	
 	})
+
+
+    $(document).on('click', '.eliminar', function(e) {
+  e.preventDefault();
+  var id = $(this).attr('data-id');
+  var href = $(this).attr('href');
+  swal.fire({
+    title: '¿Estás seguro?',
+    text: 'Este registro se eliminará permanentemente',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#dc3545',
+    cancelButtonColor: '#6c757d',
+    confirmButtonText: 'Sí, eliminar',
+    cancelButtonText: 'Cancelar',
+  }).then(function(result) {
+    if (result.isConfirmed) {
+      // Enviar la solicitud AJAX para eliminar el registro
+      $.ajax({
+        url: 'index.php?c=Hotel&a=Eliminar_hotel',
+        method: 'GET',
+        data: { id: id },
+        dataType: 'json',
+        success: function(response) {
+          if (response.exito) {
+            // La eliminación fue exitosa
+            swal.fire({
+              title: 'Registro eliminado',
+              text: 'El registro ha sido eliminado correctamente',
+              icon: 'success',
+              showCancelButton: false,
+              confirmButtonColor: '#28a745',
+              confirmButtonText: 'Aceptar',
+            });
+            // Actualizar la lista de registros sin recargar la página
+            
+            table.ajax.reload();
+          } else {
+            // La eliminación no fue exitosa
+            swal.fire({
+              title: 'Error',
+              text: 'No se pudo eliminar el registro',
+              icon: 'error',
+              showCancelButton: false,
+              confirmButtonColor: '#dc3545',
+              confirmButtonText: 'Aceptar',
+            });
+          }
+        },
+        error: function() {
+          // Error en la solicitud AJAX
+          swal.fire({
+            title: 'Error',
+            text: 'Ocurrió un error en la solicitud',
+            icon: 'error',
+            showCancelButton: false,
+            confirmButtonColor: '#dc3545',
+            confirmButtonText: 'Aceptar',
+          });
+        },
+      });
+    }
+  });
+});
+
+    
 });
     </script>
 

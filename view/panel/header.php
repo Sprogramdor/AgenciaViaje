@@ -40,10 +40,16 @@
  
         <link rel="stylesheet" id="css-main" href="public/assets/css/codebase.min.css">
         <!-- Stylesheets -->
-        <!-- Page JS Plugins CSS -->
-        <link rel="stylesheet" href="public/assets/js/plugins/datatables/dataTables.bootstrap4.min.css">
 
-        <link rel="stylesheet" href="https://cdn.datatables.net/select/1.6.2/css/select.dataTables.min.css">
+        
+
+        <!-- Page JS Plugins CSS -->
+        
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <!--     <link rel="stylesheet" href="public/assets/js/plugins/datatables/dataTables.bootstrap4.min.css"> -->
+
+       
        
     </head>
     <body>
