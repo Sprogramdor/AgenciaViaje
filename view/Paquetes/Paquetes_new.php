@@ -24,46 +24,48 @@
                                
                                     <!-- jQuery Validation (.js-validation-bootstrap class is initialized in js/pages/be_forms_validation.js) -->
                                     <!-- For more examples you can check out https://github.com/jzaefferer/jquery-validation -->
-            <form class="js-validation-bootstrap" action="#" method="post">
+            <form class="js-validation-bootstrap" action="index.php?c=Paquetes&a=register_paquete" method="post">
 
                 <div class="form-group row">
                    
-                    <label class="col-lg-4 col-form-label" for="val-username">Detalle <span class="text-danger">*</span></label>
+                    <label class="col-lg-4 col-form-label" for="val-username">Nombre <span class="text-danger">*</span></label>
                     <div class="col-lg-8">
-                        <input type="text" class="form-control" id="detalle" name="detalle" placeholder="Digite el detalle..">
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Digite el detalle..">
                     </div>
                 </div>
 
                 <div class="form-group row">
-                <label class="col-lg-4 col-form-label" for="val-select2">Vuelo<span class="text-danger">*</span></label>
+                <label class="col-lg-4 col-form-label" for="vuelo">Vuelo<span class="text-danger">*</span></label>
                     <div class="col-lg-8">
-                    <select class="js-select2 form-control" id="val-select2" name="val-select2" style="width: 100%;" >
-                     <option value="">Selecione una opcion</option>
-                        <option value="html">1</option>
-                        <option value="css">2</option>
-                        <option value="javascript">3</option>                    
-                    </select>
+                    <select class="js-select2 form-control" id="vuelo" name="vuelo" style="width: 100%;" >
+                    <option value="0">Elige una opción</option>
+            <?php foreach ($vuelo as $vu) {
+             ?>
+            <option value="<?php echo $vu->vuelo_id; ?>"><?php echo $vu->nombre_aerolinea;?></option>
+            <?php }?>   
+          </select>
                     </div>
                 </div> 
                   
                 <div class="form-group row">
-                <label class="col-lg-4 col-form-label" for="val-select2">Hotel<span class="text-danger">*</span></label>
+                <label class="col-lg-4 col-form-label" for="hotel">Hotel<span class="text-danger">*</span></label>
                     <div class="col-lg-8">
-                    <select class="js-select2 form-control" id="val-select2" name="val-select2" style="width: 100%;" >
-                     <option value="">Selecione una opcion</option>
-                        <option value="html">1</option>
-                        <option value="css">2</option>
-                        <option value="javascript">3</option>                    
-                    </select>
+                    <select class="js-select2 form-control" id="hotel" name="hotel" style="width: 100%;" >
+                    <option value="0">Elige una opción</option>
+            <?php foreach ($hotel as $ho) {
+             ?>
+            <option value="<?php echo $ho->hotel_id; ?>"><?php echo $ho->nombre_hotel;?></option>
+            <?php }?>   
+          </select>
                     </div>
                 </div> 
                 
              
 
                 <div class="form-group row">
-                    <label class="col-lg-4 col-form-label" for="val-number">Precio <span class="text-danger">*</span></label>
+                    <label class="col-lg-4 col-form-label" for="precio">Precio <span class="text-danger">*</span></label>
                     <div class="col-lg-6">
-                        <input type="num" class="form-control" id="precio_hotel" name="precio_hotel" placeholder="Ingrese el precio del paquete..">
+                        <input type="num" class="form-control" id="precio" name="precio" placeholder="Ingrese el precio del paquete..">
                     </div>
                 </div>   
                                                                             

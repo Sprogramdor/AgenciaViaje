@@ -100,7 +100,7 @@
                                         </li>
                                     
                                         <li>
-                                            <a href="index.php?c=Reservas&a=view_reservas">Registro de reservas</a>
+                                            <a href="index.php?c=Reservas&a=view_reservas">Listado de reservas</a>
                                         </li>
                                       
                                     </ul>
@@ -180,7 +180,10 @@
                                     
                                             <li>
                                                 <a href="index.php?c=Vuelo&a=view_vuelos">Lista de Vuelos</a>
-                                            </li>                                   
+                                            </li>            
+                                            <li>
+                                                <a href="index.php?c=Vuelo&a=view_aerolinea">Lista de Aerolineas</a>
+                                            </li>                       
                                         </ul>
                                     </li>
                                 </li>

@@ -18,13 +18,14 @@
             <table id="example" class="table table-bordered table-striped table-vcenter js-dataTable-full">
                 <thead>
                     <tr>
-                        <th class="text-center">N°</th>
+                      
                         <th>Nombres</th>
                         <th class="d-none d-sm-table-cell">Apellidos</th>
                         <th class="text-center">Correo</th>
                         <th class="d-none d-sm-table-cell">Cédula</th>
                         <th class="text-center">Dirección</th>
                         <th class="text-center">Telefono</th>
+                        <th>Ciudad</th>
                         <th class="text-center">Acciones</th>
                     </tr>
                 </thead>
@@ -53,7 +54,7 @@ var table = $('#example').DataTable({
  	    "aServerSide": true,//Paginación y filtrado realizados por el servidor 
 	
         "ajax":{
-            url: 'index.php?c=Reserva&a=Lista',
+            url: 'index.php?c=Clientes&a=Lista_cliente',
             type : "get",
         },
         "bDestroy": true,

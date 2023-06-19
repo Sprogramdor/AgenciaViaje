@@ -4,7 +4,7 @@
 
 
 <div class="content">
-  <h2 class="content-heading"> Registro de reservas</h2>
+  <h2 class="content-heading"> Gestión de reservas</h2>
     <div class="row">
       <div class="col-xl-12">
 <!-- Dynamic Table Full -->

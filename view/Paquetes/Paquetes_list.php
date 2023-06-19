@@ -4,7 +4,7 @@
 
 
 <div class="content">
-  <h2 class="content-heading"> Registro de Paquete</h2>
+  <h2 class="content-heading"> Gestión de Paquete</h2>
     <div class="row">
       <div class="col-xl-12">
 <!-- Dynamic Table Full -->
@@ -18,8 +18,7 @@
             <table id="example" class="table table-bordered table-striped table-vcenter js-dataTable-full">
                 <thead>
                     <tr>
-                        <th class="text-center">N°</th>
-                        <th>Detalle</th>
+                        <th>Nombre</th>
                         <th class="d-none d-sm-table-cell">Vuelo</th>
                         <th class="text-center">Hotel</th>
                         <th class="text-center">Precio</th>
@@ -51,7 +50,7 @@ var table = $('#example').DataTable({
  	    "aServerSide": true,//Paginación y filtrado realizados por el servidor 
 	
         "ajax":{
-            url: 'index.php?c=Hotel&a=Lista',
+            url: 'index.php?c=Paquetes&a=Lista_paquetes',
             type : "get",
         },
         "bDestroy": true,
@@ -86,6 +85,68 @@ var table = $('#example').DataTable({
 		}
 	
 	})
+    $(document).on('click', '.eliminar', function(e) {
+  e.preventDefault();
+  var id = $(this).attr('data-id');
+  var href = $(this).attr('href');
+  swal.fire({
+    title: '¿Estás seguro?',
+    text: 'Este registro se eliminará permanentemente',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#dc3545',
+    cancelButtonColor: '#6c757d',
+    confirmButtonText: 'Sí, eliminar',
+    cancelButtonText: 'Cancelar',
+  }).then(function(result) {
+    if (result.isConfirmed) {
+      // Enviar la solicitud AJAX para eliminar el registro
+      $.ajax({
+        url: 'index.php?c=Paquetes&a=Eliminar_paquete',
+        method: 'GET',
+        data: { id: id },
+        dataType: 'json',
+        success: function(response) {
+          if (response.exito) {
+            // La eliminación fue exitosa
+            swal.fire({
+              title: 'Registro eliminado',
+              text: 'El registro ha sido eliminado correctamente',
+              icon: 'success',
+              showCancelButton: false,
+              confirmButtonColor: '#28a745',
+              confirmButtonText: 'Aceptar',
+            });
+            // Actualizar la lista de registros sin recargar la página
+            
+            table.ajax.reload();
+          } else {
+            // La eliminación no fue exitosa
+            swal.fire({
+              title: 'Error',
+              text: 'No se pudo eliminar el registro',
+              icon: 'error',
+              showCancelButton: false,
+              confirmButtonColor: '#dc3545',
+              confirmButtonText: 'Aceptar',
+            });
+          }
+        },
+        error: function() {
+          // Error en la solicitud AJAX
+          swal.fire({
+            title: 'Error',
+            text: 'Ocurrió un error en la solicitud',
+            icon: 'error',
+            showCancelButton: false,
+            confirmButtonColor: '#dc3545',
+            confirmButtonText: 'Aceptar',
+          });
+        },
+      });
+    }
+  });
+});
 });
     </script>
 

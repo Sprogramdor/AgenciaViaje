@@ -4,7 +4,7 @@
 
 
 <div class="content">
-  <h2 class="content-heading"> Registro de Vuelos</h2>
+  <h2 class="content-heading"> Gestión de Aerolinea</h2>
     <div class="row">
       <div class="col-xl-12">
 <!-- Dynamic Table Full -->
@@ -15,16 +15,11 @@
 
         <div class="block-content block-content-full">
                             <!-- DataTables init on table by adding .js-dataTable-full class, functionality initialized in js/pages/be_tables_datatables.js -->
-            <table id="example" class="table table-bordered table-striped table-vcenter js-dataTable-full">
+                            <table id="example" class="table table-bordered table-striped table-vcenter js-dataTable-full">
                 <thead>
-                    <tr>
-                       
-                        
-                        <th class="d-none d-sm-table-cell">Aerolinea</th>
-                        <th>Origen</th>
-                        <th class="text-center">Destino</th>
-                        <th class="text-center">Precio</th>                 
-                        <th class="text-center">Fecha de partida</th>
+                    <tr>                
+                        <th class="d-none d-sm-table-cell">Nombre</th>
+                        <th class="text-center">Aeorpuerto</th>
                         <th class="text-center">Acciones</th>  
                     </tr>
                 </thead>
@@ -48,12 +43,12 @@
 <script>
  $(document).ready(function(){ 
 
-var table = $('#example').DataTable({
+    var table = $('#example').DataTable({
 		"aProcessing": true,//Activamos el procesamiento del datatables
  	    "aServerSide": true,//Paginación y filtrado realizados por el servidor 
 	
         "ajax":{
-            url: 'index.php?c=Vuelo&a=Lista_vuelos',
+            url: 'index.php?c=Vuelo&a=Lista_aerolinea',
             type : "get",
         },
         "bDestroy": true,
@@ -85,10 +80,12 @@ var table = $('#example').DataTable({
                 "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
                 "sSortDescending": ": Activar para ordenar la columna de manera descendente"
             }
-		}
+		},
+        
 	
 	})
-    
+
+
     $(document).on('click', '.eliminar', function(e) {
   e.preventDefault();
   var id = $(this).attr('data-id');
@@ -106,7 +103,7 @@ var table = $('#example').DataTable({
     if (result.isConfirmed) {
       // Enviar la solicitud AJAX para eliminar el registro
       $.ajax({
-        url: 'index.php?c=Vuelo&a=Eliminar_vuelo',
+        url: 'index.php?c=vuelo&a=Eliminar_aerolinea',
         method: 'GET',
         data: { id: id },
         dataType: 'json',
@@ -151,7 +148,10 @@ var table = $('#example').DataTable({
     }
   });
 });
+
+    
 });
     </script>
+
 
 <?php require_once('view/panel/footer.php'); ?>
