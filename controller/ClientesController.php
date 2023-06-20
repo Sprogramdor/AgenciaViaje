@@ -32,9 +32,9 @@ public function new_cliente(){
 
     $exito = $this->model->insert_cliente($cliente_DAO);
     if (!$exito) {
-        $msj = "Problema al registrar cliente";
+        $msj = "Ingrese los datos correctamente";
         $icon = 'error';
-
+       // header('Location:index.php?c=Reservas&a=view_servicios_reservas&msj='.$msj);
 
       }
 
