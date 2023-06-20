@@ -2,7 +2,7 @@
 
 require_once 'config/Conexion.php';
 
-class ClientesModel
+class ReservasModel
 {
 
     private $con;
@@ -68,24 +68,19 @@ class ClientesModel
     }
     
 
-    public function insert_cliente($cliente_DAO) {
+    public function insert_reserva($reserva_DAO) {
         try{
-        $sql = "INSERT INTO `cliente` (`nombre`, `Apellido`, `Correo`, `cedula`, `telefono`, `Direccion`, `Ciudad_FK`)
-                VALUES (:nombre, :apellido, :correo, :cedula, :telefono, :direccion, :ciudad_fk)";
+        $sql = "INSERT INTO `reserva` (`cliente_FK`, `agente_Fk`)
+                VALUES (:cfk ,:afk)";
                 
         // Preparar la sentencia
         $stmt = $this->con->prepare($sql);
         
-    
+
         
         $data =[
-            'nombre'=> $cliente_DAO->getNombre(),
-            'apellido'=> $cliente_DAO->getApellido(),
-            'correo'=>$cliente_DAO->getCorreo(),
-            'cedula'=> $cliente_DAO->getCedula(),
-            'telefono'=>$cliente_DAO->getTelefono(),
-            'direccion'=>$cliente_DAO->getDireccion(),
-            'ciudad_fk'=>$cliente_DAO->getCiudadFk(),
+            'cfk'=> $reserva_DAO->getClienteFK(),
+            'afk'=> $reserva_DAO->getAgenteFK()
         ];
         // Ejecutar la sentencia
         $stmt->execute($data);

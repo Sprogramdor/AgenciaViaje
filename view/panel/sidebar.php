@@ -83,12 +83,6 @@
                                         UI</span><span class="sidebar-mini-hidden">Gestión de Reservas</span></li>
                                 <li>
 
-                                <!-- <li>
-                                    <a href="index.php?c=Reservas&a=view_reservas">
-                                        <i class="si si-layers"></i>
-                                        <span class="sidebar-mini-hide">Gestión de Reserva</span>
-                                    </a>
-                                </li> -->
                                  <li>
                                 <a class="nav-submenu" data-toggle="nav-submenu" href="#">
                                         <i class="si si-layers"></i>
@@ -96,7 +90,7 @@
                                     </a>
                                     <ul>
                                         <li>
-                                            <a href="index.php?c=Reservas&a=new_reservas">Nueva reserva</a>
+                                            <a href="index.php?c=Reservas&a=opcion_reservas">Nueva reserva</a>
                                         </li>
                                     
                                         <li>
@@ -106,19 +100,6 @@
                                     </ul>
                                     </li>
 
-                              <!--   <li>
-                                    <a href="#">
-                                        <i class="si si-doc"></i>
-                                        <span class="sidebar-mini-hide">Factura</span>
-                                    </a>
-                                </li> -->
-                               <!--  <li>
-                                    <a href="index.php?c=Clientes&a=view_clientes">
-                                        <i class="si si-users"></i>
-                                        <span class="sidebar-mini-hide"></span>
-                                    </a>
-                                </li>
- -->
                                 <li>
                                     <li>
                                         <a class="nav-submenu" data-toggle="nav-submenu" href="#">
