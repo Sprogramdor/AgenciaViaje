@@ -25,7 +25,7 @@ class ReservasController
 
     public function view_servicios_reservas()
     {
-        require_once 'view/Reservas/Reservas_servicios.php';
+        require_once 'view/Reservas/Reservas_menu.php';
         
         
     }
