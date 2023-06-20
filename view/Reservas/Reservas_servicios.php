@@ -17,7 +17,7 @@
     <div class="row">
       <div class="col-xl-12">
                                
-            <form class="js-validation-bootstrap" action="index.php?c=Reservas&a=view_detalles_reservas" method="post">
+            <form class="js-validation-bootstrap" action="index.php?c=Reservas&a=view_detalles_reservas"method="post">
 
                                                                                  
             <div class="form-group row">
@@ -38,20 +38,7 @@
                 </div> 
                 
              
-                                               
-                <div class="form-group row">
-                    <label class="col-lg-2 col-form-label" for="fecha_inicio_hotel">Fecha de inicio <span class="text-danger">*</span></label>
-                    <div class="col-lg-4">
-                    <input class="form-control" type="date" id="fecha_inicio_hotel" name="fecha_inicio_hotel">
-                    </div>
-                </div>   
-                
-                <div class="form-group row">
-                    <label class="col-lg-2 col-form-label" for="fecha_final_hotel">Fecha de Fin <span class="text-danger">*</span></label>
-                    <div class="col-lg-4">
-                    <input class="form-control" type="date" id="fecha_final_hotel" name="fecha_final_hotel">  
-                    </div>
-                </div>
+                                        
 <br>
             <div class="form-group">
             <div class="col-xl-12">
@@ -71,8 +58,8 @@
                                     <tr>
                                     <td class="text-center">
                                     <button type="button" class="btn btn-sm btn-success">
-                        <i class="fa fa-plus"></i>
-                    </button>
+                                        <i class="fa fa-plus"></i>
+                                    </button>
                                     </td>
                                         <td class="text-center">1</td>
                                         <td class="font-w600">Jeffrey Shaw</td>

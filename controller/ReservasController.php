@@ -14,6 +14,8 @@ class ReservasController
       public function new_reservas()
     {
         require_once 'view/Reservas/Reservas_new.php';
+
+
     }
 
     public function view_reservas()
@@ -24,6 +26,8 @@ class ReservasController
     public function view_servicios_reservas()
     {
         require_once 'view/Reservas/Reservas_servicios.php';
+        
+        
     }
 
     public function view_detalles_reservas()

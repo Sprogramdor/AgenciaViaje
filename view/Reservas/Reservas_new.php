@@ -17,7 +17,7 @@
                 <div class="row justify-content-center py-20">
                     <div class="col-xl-6">
                                                                                  
-            <form class="js-validation-bootstrap" action="index.php?c=Reservas&a=view_servicios_reservas" method="post">
+            <form class="js-validation-bootstrap" action="index.php?c=Clientes&a=new_cliente" method="post">
             <div class="form-group row">
                     <label class="col-lg-4 col-form-label" for="fecha_creacion">Fecha de Creación</label>
                     <div class="col-lg-6">
@@ -94,7 +94,7 @@
                             <div class="col-6">
                                  <div class="form-group">                                  
                                     <div class="form-material floating">
-                                        <input class="form-control" type="text" id="wizard-validation-material-firstname" name="wizard-validation-material-firstname">
+                                        <input class="form-control" type="text" id="nombre" name="nombre">
                                         <label for="wizard-validation-material-firstname">Nombres</label>
                                     </div>
                                 </div>
@@ -103,7 +103,7 @@
                             <div class="col-6">
                                 <div class="form-group"> 
                                     <div class="form-material floating">
-                                        <input class="form-control" type="text" id="wizard-validation-material-lastname" name="wizard-validation-material-lastname">
+                                        <input class="form-control" type="text" id="Apellido" name="Apellido">
                                         <label for="wizard-validation-material-lastname">Apellidos</label>
                                     </div>
                                 </div>
@@ -114,7 +114,7 @@
                                 <div class="col-6">
                                             <div class="form-group">
                                                 <div class="form-material floating">
-                                                    <input class="form-control" type="email" id="wizard-validation-material-email" name="wizard-validation-material-email">
+                                                    <input class="form-control" type="email" id="Correo" name="Correo">
                                                     <label for="wizard-validation-material-email">Correo</label>
                                                 </div>
                                             </div>
@@ -122,7 +122,7 @@
                                             <div class="col-6">
                                             <div class="form-group">
                                                 <div class="form-material floating">
-                                                    <input class="form-control" type="text" id="wizard-validation-material-number" name="wizard-validation-material-number">
+                                                    <input class="form-control" type="text" id="cedula" name="cedula">
                                                     <label for="wizard-validation-material-number">Cédula</label>
                                                 </div>
                                             </div>
@@ -133,7 +133,7 @@
                         <div class="col-6">
                                             <div class="form-group">
                                                 <div class="form-material floating">
-                                                    <input class="form-control" type="text" id="wizard-validation-material-numberT" name="wizard-validation-material-numberT">
+                                                    <input class="form-control" type="text" id="telfono" name="telefono">
                                                     <label for="wizard-validation-material-numberT">Telefono</label>
                                                 </div>
                                             </div>
@@ -141,7 +141,7 @@
                                             <div class="col-6">
                                             <div class="form-group">
                                                 <div class="form-material floating">
-                                                    <select class="form-control" id="wizard-validation-material-skills" name="wizard-validation-material-skills" size="1">
+                                                    <select class="form-control" id="Ciudad_FK" name="Ciudad_FK" size="1">
                                                         <option> Seleccione una opcion</option><!-- Empty value for demostrating material select box -->
                                                         <option value="1">Guayaquil</option>
                                                         <option value="2">Quito</option>
@@ -155,7 +155,7 @@
                         </div>
                                             <div class="form-group">
                                                 <div class="form-material floating">
-                                                    <input class="form-control" type="text" id="wizard-validation-material-location" name="wizard-validation-material-location">
+                                                    <input class="form-control" type="text" id="Direccion" name="Direccion">
                                                     <label for="wizard-validation-material-location">Dirección</label>
                                                 </div>
                                             </div>
