@@ -2,16 +2,19 @@
     session_start();
     require_once 'model/ClientesModel.php';
     require_once 'model/Dto/cliente.php';
+    require_once 'model/ReservasModel.php';
+    require_once 'model/Dto/reserva.php';
 
 
 class ClientesController
 {
     private $model;
-
+    private $modelR;
     public function __construct()
 
      {
          $this->model = new ClientesModel(); 
+         $this->modelR = new ReservasModel(); 
     }
 
     public function view_clientes()
@@ -42,7 +45,24 @@ public function new_cliente(){
         $id=$this->model->get_cliente_id_by_cedula($_POST['cedula']);
         $msj = 'Guardado exitosamente';
         $icon ='success';
-        header('Location:index.php?c=Reservas&a=view_servicios_reservas&id='.$id);
+        $reserva_DAO= new reserva();
+        $reserva_DAO->setClienteFK($id);
+        $reserva_DAO->setAgenteFK($_SESSION['id']);
+        //crear reserva 
+        $exito = $this->modelR->insert_reserva($reserva_DAO);
+        
+        if (!$exito) {
+            $msj = "Fallo crear reserva";
+            $icon = 'error';
+           // header('Location:index.php?c=Reservas&a=view_servicios_reservas&msj='.$msj);
+    
+          }else{
+
+            header('Location:index.php?c=Reservas&a=view_servicios_reservas&id='.$id);
+          }
+
+
+        
       }
 
       $_SESSION['m_crear_usuario'] = $msj;

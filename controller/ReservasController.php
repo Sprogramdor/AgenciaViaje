@@ -1,7 +1,7 @@
 <?php
     session_start();
 /* require_once 'model/ReservasModel.php'; */
-
+require_once 'controller/ClientesController.php';
 class ReservasController
 {
     private $model;
@@ -13,10 +13,12 @@ class ReservasController
     }
       public function new_reservas()
     {
-        require_once 'view/Reservas/Reservas_new.php';
-
+        require_once 'view/Reservas/Reservas_new.php'; 
 
     }
+
+
+
 
     public function view_reservas()
     {
