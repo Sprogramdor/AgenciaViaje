@@ -39,13 +39,14 @@
                         <div class="col-md-6">
                             <div class="block block-rounded">
                                 <div class="block-header block-header-default">
-                                    <h3 class="block-title">Datos del Agente</h3>
+                                    <h5 class="block-title fw-bold">Datos del Agente</h5>
                                 </div>
                                 <div class="block-content">
-                                    <div class="font-size-lg text-black mb-5">John Smith</div>
-                                    <address>
-                                        Correo<br>
-                                        </address>
+                                    <div class="font-size-lg text-black mb-5"><strong class="fw-bold">Nombre:</strong> <?php echo $_SESSION['agente'];?></div>
+                                    <div class="font-size-lg text-black mb-5"><strong class="fw-bold">Apellido:</strong> <?php echo $_SESSION['apellido'];?></div>
+                                    <div class="font-size-lg text-black mb-5"><strong class="fw-bold">Correo:</strong> <?php echo $_SESSION['user'];?></div>
+                                   
+                                    
                                 </div>
                             </div>
                         </div>

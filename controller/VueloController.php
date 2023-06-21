@@ -39,9 +39,10 @@ class VueloController
         $data= Array();
         foreach($datos as $row){
             $sub_array = array();
+            $sub_array[] = $row["aerolinea_id"];
             $sub_array[] = $row["nombre"];
             $sub_array[] = $row["aeropuerto"];
-            $sub_array[] = 
+           /*  $sub_array[] = 
             '<div class="btn-group btn-group-sm">
                 <a class="btn btn-alt-primary" 
                 href="index.php?c=Vuelo&a=view_Editar&aero_edit='.$row['aerolinea_id'].'">
@@ -52,7 +53,7 @@ class VueloController
                     <i class="fa fa-remove mr-5"></i>&nbsp;Borrar
                 </a> 
             </div>';
-            
+             */
            $data[]=$sub_array; 
            
          

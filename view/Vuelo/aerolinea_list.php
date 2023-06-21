@@ -6,7 +6,7 @@
 <div class="content">
   <h2 class="content-heading"> Gestión de Aerolinea</h2>
     <div class="row">
-      <div class="col-xl-12">
+      <div class="col-xl-8">
 <!-- Dynamic Table Full -->
     <div class="block">
         <div class="block-header block-header-default">
@@ -17,10 +17,11 @@
                             <!-- DataTables init on table by adding .js-dataTable-full class, functionality initialized in js/pages/be_tables_datatables.js -->
                             <table id="example" class="table table-bordered table-striped table-vcenter js-dataTable-full">
                 <thead>
-                    <tr>                
+                    <tr>        
+                      <th>#</th>        
                         <th class="d-none d-sm-table-cell">Nombre</th>
                         <th class="text-center">Aeorpuerto</th>
-                        <th class="text-center">Acciones</th>  
+                         
                     </tr>
                 </thead>
 

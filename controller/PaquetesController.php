@@ -43,16 +43,16 @@ class PaquetesController
             $sub_array[] = $row["precio"];
             $sub_array[] = 
             '<div class="btn-group btn-group-sm">
-                <a class="btn btn-alt-primary" 
-                href="index.php?c=Paquetes&a=view_Editar&paquete_edit='.$row['paquete_id'].'">
-                    <i class="fa fa-edit mr-5"></i>&nbsp;Editar
-                </a>
+                
                 <a class="btn btn-alt-danger mr-5 mb-5 eliminar" 
                 href="index.php?c=Paquetes&a=Eliminar_paquete&id='.$row['paquete_id'].'" data-id="'.$row['paquete_id'].'">
                     <i class="fa fa-remove mr-5"></i>&nbsp;Borrar
                 </a> 
             </div>';
-           
+           /* <a class="btn btn-alt-primary" 
+                href="index.php?c=Paquetes&a=view_Editar&paquete_edit='.$row['paquete_id'].'">
+                    <i class="fa fa-edit mr-5"></i>&nbsp;Editar
+                </a> */
            $data[]=$sub_array; 
            
          

@@ -82,9 +82,10 @@ var table = $('#example').DataTable({
                 "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
                 "sSortDescending": ": Activar para ordenar la columna de manera descendente"
             }
-		}
-	
-	})
+		}, 
+        
+   
+	});
     $(document).on('click', '.eliminar', function(e) {
   e.preventDefault();
   var id = $(this).attr('data-id');
@@ -146,7 +147,15 @@ var table = $('#example').DataTable({
       });
     }
   });
+
 });
+
+
+
+
+
+  
+
 });
     </script>
 

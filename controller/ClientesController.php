@@ -89,17 +89,7 @@ public function new_cliente(){
             $sub_array[] = $row["Direccion"];
             $sub_array[] = $row["telefono"];
             $sub_array[] = $row["nombreCiudad"];
-            $sub_array[] = 
-            '<div class="btn-group btn-group-sm">
-                <a class="btn btn-alt-primary" 
-                href="index.php?c=Clientes&a=view_Editar&cliente_edit='.$row['cliente_id'].'">
-                    <i class="fa fa-edit mr-5"></i>&nbsp;Editar
-                </a>
-                <a class="btn btn-alt-danger mr-5 mb-5 eliminar" 
-                href="index.php?c=Clientes&a=Eliminar_cliente&id='.$row['cliente_id'].'" data-id="'.$row['cliente_id'].'">
-                    <i class="fa fa-remove mr-5"></i>&nbsp;Borrar
-                </a> 
-            </div>';
+           
            
            $data[]=$sub_array; 
            

@@ -110,10 +110,7 @@
                                             <li>
                                                 <a href="index.php?c=Clientes&a=view_clientes">Consultar</a>
                                             </li>
-                                    
-                                            <li>
-                                                <a href="">Factura</a>
-                                            </li>                                   
+                                                                                                 
                                         </ul>
                                     </li>
                                 </li>
@@ -155,9 +152,7 @@
                                             <li>
                                                 <a href="index.php?c=Vuelo&a=new_vuelos">Agregar nuevo</a>
                                             </li>
-                                            <li>
-                                                <a href="index.php?c=Vuelo&a=new_aerolinea">Añadir Aerolinea</a>
-                                            </li>
+                                            
                                     
                                             <li>
                                                 <a href="index.php?c=Vuelo&a=view_vuelos">Lista de Vuelos</a>

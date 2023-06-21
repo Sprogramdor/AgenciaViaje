@@ -12,7 +12,24 @@ class ReservasModel
         $this->con = Conexion::getConexion(); //operador :: llamando a un metodo estatico
     }
 
-    
+    /* Listado de reservas */
+    public function get_reservas_hotel(){
+        $sql = "SELECT * FROM `reservas_hotel` 
+        INNER JOIN hotel ON hotel.hotel_id = reservas_hotel.RHhotel_fk
+                INNER JOIN cliente ON cliente.cliente_id = reservas_hotel.cliente_FK 
+                INNER JOIN ciudades ON ciudades.ciudades_id = cliente.Ciudad_FK";  
+        // preparar la sentencia
+        $stmt = $this->con->prepare($sql);
+       
+        // ejecutar la sentencia
+        $stmt->execute();
+        //recuperar  resultados
+        $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        //retornar resultados
+        return $resultado;
+    } 
+
+
     public function get_cliente(){
         $sql = "SELECT * FROM cliente 
         INNER JOIN ciudades ON ciudades.ciudades_id = cliente.Ciudad_FK  ";  

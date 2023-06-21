@@ -10,12 +10,42 @@
 <!-- Dynamic Table Full -->
     <div class="block">
         <div class="block-header block-header-default">
-            <h3 class="block-title">Listado <small>Full</small></h3>
+            <h3 class="block-title">Listado <small>reservas de hoteles</small></h3>
         </div>
 
         <div class="block-content block-content-full">
                             <!-- DataTables init on table by adding .js-dataTable-full class, functionality initialized in js/pages/be_tables_datatables.js -->
             <table id="example" class="table table-bordered table-striped table-vcenter js-dataTable-full">
+                <thead>
+                    <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                        <th class="d-none d-sm-table-cell">Cédula</th>
+                        <th class="text-center">Hotel</th>
+                        <th class="text-center">Valoración</th>
+                        <th class="text-center">Direccion</th>
+                        <th class="text-center">Precio</th>
+                        <th class="text-center">Destino</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                  
+                        
+                </tbody>
+            </table>
+        </div>
+    </div>
+                    <!-- END Dynamic Table Full -->
+<!-- Dynamic Table Full -->
+<div class="block">
+        <div class="block-header block-header-default">
+            <h3 class="block-title">Listado <small>reservas de vuelos</small></h3>
+        </div>
+
+        <div class="block-content block-content-full">
+                            <!-- DataTables init on table by adding .js-dataTable-full class, functionality initialized in js/pages/be_tables_datatables.js -->
+            <table id="" class="table table-bordered table-striped table-vcenter js-dataTable-full">
                 <thead>
                     <tr>
                         <th class="text-center">N°</th>
@@ -35,8 +65,36 @@
             </table>
         </div>
     </div>
-                    <!-- END Dynamic Table Full -->
+    <!-- Dynamic Table Full -->
+    <div class="block">
+        <div class="block-header block-header-default">
+            <h3 class="block-title">Listado <small>reservas de paquetes</small></h3>
+        </div>
 
+        <div class="block-content block-content-full">
+                            <!-- DataTables init on table by adding .js-dataTable-full class, functionality initialized in js/pages/be_tables_datatables.js -->
+            <table id="" class="table table-bordered table-striped table-vcenter js-dataTable-full">
+                <thead>
+                    <tr>
+                        
+                        <th>Cliente</th>
+                        <th class="d-none d-sm-table-cell">Cédula</th>
+                       
+                        <th class="text-center">Hotel</th>
+                        <th class="text-center">Valoración</th>
+                        <th class="text-center">Direccion</th>
+                        <th class="text-center">Precio</th>
+                        <th class="text-center">Destino</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                  
+                        
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 
       </div>
@@ -52,7 +110,7 @@ var table = $('#example').DataTable({
  	    "aServerSide": true,//Paginación y filtrado realizados por el servidor 
 	
         "ajax":{
-            url: 'index.php?c=Reserva&a=Lista',
+            url: 'index.php?c=Reservas&a=Lista_reservas_hotel',
             type : "get",
         },
         "bDestroy": true,

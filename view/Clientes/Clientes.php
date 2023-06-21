@@ -26,7 +26,7 @@
                         <th class="text-center">Dirección</th>
                         <th class="text-center">Telefono</th>
                         <th>Ciudad</th>
-                        <th class="text-center">Acciones</th>
+                       
                     </tr>
                 </thead>
 
@@ -46,10 +46,15 @@
 </div>
 
 </main>
+
 <script>
  $(document).ready(function(){ 
 
 var table = $('#example').DataTable({
+    dom: 'Bfrtip',
+    buttons: [
+        'copy', 'excel', 'pdf'
+    ],
 		"aProcessing": true,//Activamos el procesamiento del datatables
  	    "aServerSide": true,//Paginación y filtrado realizados por el servidor 
 	
@@ -86,9 +91,10 @@ var table = $('#example').DataTable({
                 "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
                 "sSortDescending": ": Activar para ordenar la columna de manera descendente"
             }
-		}
-	
+		},
+       
 	})
+  
 });
     </script>
 
