@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    //session_start();
     require_once 'model/ClientesModel.php';
     require_once 'model/Dto/cliente.php';
     require_once 'model/ReservasModel.php';
@@ -67,7 +67,7 @@ public function new_cliente(){
 
       $_SESSION['m_crear_usuario'] = $msj;
       $_SESSION['m_icon_interesado'] = $icon;
-      var_dump($msj);
+      //var_dump($msj);
       
 
     //require_once 'view/Reservas/Reservas_servicios.php';

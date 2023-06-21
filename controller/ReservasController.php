@@ -9,7 +9,7 @@ class ReservasController
     public function __construct()
 
      {
-        /* $this->model = new ReservasModel(); */
+         //$this->model = new CLientesController(); 
     }
 
     public function opcion_reservas()
@@ -25,19 +25,38 @@ class ReservasController
 
       public function new_reservas()
     {
+        
         require_once 'view/Reservas/Reservas_new.php'; 
 
     }
 
+    public function new_reservaH()
+    {
+        $reservahotel = new servicios_reservas_hotel();
+        $reserva->setRreservaFK($_POST['nombre']); 
+        $reserva->setHotelFK($_GET['hid']);// ID hotel 
+
+        //Crear objeto reserva hotel  
+        //cambiar directamente a factura wuw
+        require_once 'view/Reservas/Reservas_new.php'; 
+
+    }
+
+
     public function view_servicios_reservas()
     {
+       
         require_once 'view/Reservas/Reservas_menu.php';
           
     }
 
-    public function servicios_reservas_hotel()
-    {
-        require_once 'view/Reservas/Reservas_hotel.php';
+    public function servicios_reservas_hotel()//AKI
+    {//poner crear una reserva hotel uwu 
+
+
+        require_once 'view/Hotel/Hotel_listC.php';
+
+
           
     }
     public function servicios_reservas_vuelo()

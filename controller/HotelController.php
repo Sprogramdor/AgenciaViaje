@@ -107,6 +107,9 @@ class HotelController
     {
         require_once 'view/Hotel/Hotel_list.php';
     }
+
+
+
     public function Lista_hoteles(){
     
         $datos=$this->model->get_hotel();
@@ -145,6 +148,59 @@ class HotelController
     
      
     }
+
+
+
+    public function Lista_hoteles_Compra(){
+    
+        $datos=$this->model->get_hotel();
+    
+        $data= Array();
+        foreach($datos as $row){
+            $sub_array = array();
+            $sub_array[] = $row["nombre_hotel"];
+            $sub_array[] = $row["valoracion"];
+            $sub_array[] = $row["direccion"];
+            $sub_array[] = $row["precioNoche"];
+            $sub_array[] = $row["nombreCiudad"];
+            $sub_array[] = 
+            '<div class="btn-group btn-group-sm">
+                <a class="btn btn-alt-primary" 
+                href="index.php?c=Reservas&a=new_reservaH&hid='.$row['hotel_id'].'">
+                &nbsp;Resevar
+                </a>
+            </div>';
+           
+           $data[]=$sub_array; 
+           
+         
+        }
+        $results = array(
+            "sEcho"=>1,
+            "iTotalRecords"=>count($data),
+            "iTotalDisplayRecords"=>count($data),
+            "aaData"=>$data);
+           
+        echo $json = json_encode($results); 
+    
+     
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public function Eliminar_hotel(){
         $id = $_GET['id'];

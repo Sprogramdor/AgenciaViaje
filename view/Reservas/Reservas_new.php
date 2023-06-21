@@ -21,13 +21,8 @@
                 <div class="row justify-content-center py-20">
                     <div class="col-xl-6">
                                                           <!-- index.php?c=Clientes&a=new_cliente -->                       
-            <form class="js-validation-bootstrap" action="index.php?c=Reservas&a=view_servicios_reservas" method="post">
-            <!-- <div class="form-group row">
-                    <label class="col-lg-4 col-form-label" for="fecha_creacion">Fecha de Creación</label>
-                    <div class="col-lg-6">
-                        <input type="date" class="form-control" id="fecha_creacion" name="fecha_creacion">
-                    </div>
-                </div>   -->
+            <form class="js-validation-bootstrap" action="index.php?c=Clientes&a=new_cliente" method="post">
+       
 
                 <div class="row">
                             <div class="col-6">

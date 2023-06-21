@@ -75,9 +75,6 @@ class ReservasModel
                 
         // Preparar la sentencia
         $stmt = $this->con->prepare($sql);
-        
-
-        
         $data =[
             'cfk'=> $reserva_DAO->getClienteFK(),
             'afk'=> $reserva_DAO->getAgenteFK()
