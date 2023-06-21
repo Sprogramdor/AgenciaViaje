@@ -37,10 +37,10 @@ class PaquetesController
         $data= Array();
         foreach($datos as $row){
             $sub_array = array();
-            $sub_array[] = $row["nombre_paquete"];
-            $sub_array[] = $row["nombre_aerolinea"];
+            $sub_array[] = $row["nombreP"];
+            $sub_array[] = $row["nombre"];
             $sub_array[] = $row["nombre_hotel"];
-            $sub_array[] = $row["precio_paquete"];
+            $sub_array[] = $row["precio"];
             $sub_array[] = 
             '<div class="btn-group btn-group-sm">
                 <a class="btn btn-alt-primary" 

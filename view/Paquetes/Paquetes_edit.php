@@ -31,7 +31,7 @@
                    
                     <label class="col-lg-4 col-form-label" for="val-username">Nombre <span class="text-danger">*</span></label>
                     <div class="col-lg-8">
-                        <input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo $paquete_edit->nombre_paquete; ?>" placeholder="Digite el detalle..">
+                        <input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo $paquete_edit->nombreP; ?>" placeholder="Digite el detalle..">
                     </div>
                 </div>
 
@@ -46,7 +46,7 @@
                     $selected='selected="selected"';
               }
              ?>
-            <option value="<?php echo $vu->vuelo_id; ?>" <?php echo $selected; ?>><?php echo $vu->nombre_aerolinea;?></option>
+            <option value="<?php echo $vu->vuelo_id; ?>" <?php echo $selected; ?>><?php echo $vu->nombre;?></option>
             <?php }?>   
           </select>
                     </div>
@@ -75,7 +75,7 @@
                 <div class="form-group row">
                     <label class="col-lg-4 col-form-label" for="precio">Precio <span class="text-danger">*</span></label>
                     <div class="col-lg-6">
-                        <input type="num" class="form-control" id="precio" name="precio" value="<?php echo $paquete_edit->precio_paquete; ?>" placeholder="Ingrese el precio del paquete..">
+                        <input type="num" class="form-control" id="precio" name="precio" value="<?php echo $paquete_edit->precio; ?>" placeholder="Ingrese el precio del paquete..">
                     </div>
                 </div>   
                                                                             

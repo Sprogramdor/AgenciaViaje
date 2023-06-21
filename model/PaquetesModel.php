@@ -32,7 +32,7 @@ class PaquetesModel
  
         try{
 
-            $sql = "INSERT INTO `paquetes` (`nombre_paquete`,`Pvuelo_fk`,`Photel_fk`, `precio_paquete`) 
+            $sql = "INSERT INTO `paquetes` (`nombreP`,`Pvuelo_fk`,`Photel_fk`, `precio`) 
             VALUES (:nom,:vu,:ho,:pre)"; 
     
             $sentencia = $this->con->prepare($sql);
@@ -80,8 +80,8 @@ class PaquetesModel
  
     try{
 
-        $sql = "UPDATE `paquetes` SET nombre_paquete=:nom, Pvuelo_fk=:vu,
-        Photel_fk=:ho, precio_paquete=:pre
+        $sql = "UPDATE `paquetes` SET nombreP=:nom, Pvuelo_fk=:vu,
+        Photel_fk=:ho, precio=:pre
         Where paquete_id =:id"; 
 
         $sentencia = $this->con->prepare($sql);

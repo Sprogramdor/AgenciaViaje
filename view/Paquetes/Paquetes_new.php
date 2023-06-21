@@ -41,7 +41,7 @@
                     <option value="0">Elige una opción</option>
             <?php foreach ($vuelo as $vu) {
              ?>
-            <option value="<?php echo $vu->vuelo_id; ?>"><?php echo $vu->nombre_aerolinea;?></option>
+            <option value="<?php echo $vu->vuelo_id; ?>"><?php echo $vu->nombre;?></option>
             <?php }?>   
           </select>
                     </div>

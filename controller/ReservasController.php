@@ -32,13 +32,13 @@ class ReservasController
 
     public function new_reservaH()
     {
-        $reservahotel = new servicios_reservas_hotel();
-        $reserva->setRreservaFK($_POST['nombre']); 
-        $reserva->setHotelFK($_GET['hid']);// ID hotel 
+       /*$reservahotel = new servicios_reservas_hotel();
+        $reservahotel ->setRreservaFK($_POST['nombre']); 
+        $reservahotel ->setHotelFK($_GET['hid']);// ID hotel */
 
         //Crear objeto reserva hotel  
         //cambiar directamente a factura wuw
-        require_once 'view/Reservas/Reservas_new.php'; 
+        require_once 'view/Reservas/Reservas_factura.php';
 
     }
 
