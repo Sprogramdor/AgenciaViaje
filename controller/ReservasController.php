@@ -99,16 +99,16 @@ class ReservasController
         $msj = "Ingrese los datos correctamente";
         $icon = 'error';
        // header('Location:index.php?c=Reservas&a=view_servicios_reservas&msj='.$msj);
-       var_dump( $reservavuelo);
+       //var_dump( $reservavuelo);
       }
 
       else{
        
         $msj = 'Guardado exitosamente';
         $icon ='success';
-        echo "guardo";
-        var_dump( $reservavuelo);
-         //require_once 'view/Reservas/Reservas_factura.php';
+       // echo "guardo";
+       // var_dump( $reservavuelo);
+        require_once 'view/Reservas/Reservas_factura.php';
       }
 
       $_SESSION['m_crear_usuario'] = $msj;

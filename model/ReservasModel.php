@@ -174,8 +174,8 @@ class ReservasModel
                 // Preparar la sentencia
                 $stmt = $this->con->prepare($sql);
                 $data =[
-                    'vfk'=> $reservavuelo->getClienteFK(),
-                    'cfk'=> $reservavuelo->getVueloFk()
+                    'cfk'=> $reservavuelo->getClienteFK(),
+                    'vfk'=> $reservavuelo->getVueloFk()
                 ];
                 // Ejecutar la sentencia
                 $stmt->execute($data);
