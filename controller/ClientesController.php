@@ -37,32 +37,17 @@ public function new_cliente(){
     if (!$exito) {
         $msj = "Ingrese los datos correctamente";
         $icon = 'error';
-       // header('Location:index.php?c=Reservas&a=view_servicios_reservas&msj='.$msj);
-
+       // header('Location:index.php?c=Reservas&a=view_servicios_reservas');
+       
       }
 
       else{
         $id=$this->model->get_cliente_id_by_cedula($_POST['cedula']);
         $msj = 'Guardado exitosamente';
         $icon ='success';
-        $reserva_DAO= new reserva();
-        $reserva_DAO->setClienteFK($id);
-        $reserva_DAO->setAgenteFK($_SESSION['id']);
         //crear reserva 
-        $exito = $this->modelR->insert_reserva($reserva_DAO);
-        
-        if (!$exito) {
-            $msj = "Fallo crear reserva";
-            $icon = 'error';
-           // header('Location:index.php?c=Reservas&a=view_servicios_reservas&msj='.$msj);
-    
-          }else{
-
-            header('Location:index.php?c=Reservas&a=view_servicios_reservas&id='.$id);
-          }
-
-
-        
+     
+        header('Location:index.php?c=Reservas&a=view_servicios_reservas&idC='.$id);
       }
 
       $_SESSION['m_crear_usuario'] = $msj;

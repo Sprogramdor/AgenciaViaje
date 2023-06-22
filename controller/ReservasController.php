@@ -38,15 +38,22 @@ class ReservasController
 
     public function view_servicios_reservas()
     {
+        $idC;
         if(isset($_POST['cliente_existente']) && !empty($_POST['cliente_existente'])){
-            $idC=$_SESSION['idCliente'] = $_POST['cliente_existente'] ;
-
+            $_SESSION['idCliente'] = $_POST['cliente_existente'] ;
+               $idC=$_POST['cliente_existente'] ;
         }else{
-            $idC=$_SESSION['idCliente'] = $_GET['idC'] ;
+            if( isset($_GET['idC']) && !empty($_GET['idC'])){
+               $_SESSION['idCliente'] = $_GET['idC'] ;
+               $idC=$_GET['idC'] ;
+               
+            }else{
+              
+                
+            }
+            
         }
-        
-        
-        
+
         require_once 'view/Reservas/Reservas_menu.php';
           
     }
@@ -59,11 +66,6 @@ class ReservasController
         $reservahotel ->setClienteFK($valoridc); 
         $reservahotel ->setRHhotelFk($_GET['hid']);// ID hotel */
          
-        
-
-        
-       
-
         $exito = $this->model->insert_reservaH($reservahotel);
     if (!$exito) {
         $msj = "Ingrese los datos correctamente";
@@ -141,6 +143,8 @@ class ReservasController
     {
         require_once 'view/Reservas/Reservas_list.php';
     }
+
+
 
     public function Lista_reservas_hotel(){
     
@@ -225,6 +229,7 @@ class ReservasController
            /*  var_dump($results); */
         echo $json = json_encode($results); 
     }
+
 
 
 

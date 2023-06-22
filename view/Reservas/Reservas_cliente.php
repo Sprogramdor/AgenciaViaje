@@ -28,7 +28,7 @@
         <div class="col-md-6 col-xl-6">
 
             <label class="col-lg-12 col-form-label" for="cliente_existente">Seleccione al cliente registrado <span class="text-danger">*</span></label>
-            <form class="js-validation-bootstrap" action="index.php?c=Reservas&a=view_servicios_reservas" method="post">
+            <form class="js-validation-bootstrap" action="index.php?c=Reservas&a=view_servicios_reservas" method="post" onsubmit="return validarFormulario()">
                     <div class="col-lg-8">
                     
                     <select class="js-select2 form-control" id="cliente_existente" name="cliente_existente" style="width: 100%;" data-placeholder="Digite el destino..">
@@ -60,5 +60,15 @@
 </div>
 </main> 
 
+<script>
+    function validarFormulario() {
+        var clienteExistente = document.getElementById("cliente_existente").value;
+        if (clienteExistente === "0") {
+            alert("Debe seleccionar un cliente registrado");
+            return false; // Evita que el formulario se envíe
+        }
+        return true; // Permite que el formulario se envíe
+    }
+</script>
 
 <?php require_once('view/panel/footer.php'); ?>

@@ -95,7 +95,8 @@ class ClientesModel
             return false;
         }
         }catch(Exception $e){
-            echo $e->getMessage();
+            //echo $e->getMessage();
+            header('Location:index.php?c=Reservas&a=new_reservas');
             return false;
         }
             return true;          
