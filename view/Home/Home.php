@@ -19,7 +19,7 @@
                     <div class="row invisible" data-toggle="appear">
                         <!-- Row #1 -->
                         <div class="col-6 col-xl-3">
-                            <a class="block block-link-pop text-right bg-primary" href="javascript:void(0)">
+                            <a class="block block-link-pop text-right bg-primary" href="index.php?c=Reservas&a=opcion_reservas">
                                 <div class="block-content block-content-full clearfix border-black-op-b border-3x">
                                     <div class="float-left mt-10 d-none d-sm-block">
                                         <i class="si si-bar-chart fa-3x text-primary-light"></i>
@@ -30,35 +30,35 @@
                             </a>
                         </div>
                         <div class="col-6 col-xl-3">
-                            <a class="block block-link-pop text-right bg-earth" href="javascript:void(0)">
+                            <a class="block block-link-pop text-right bg-earth" href="index.php?c=Hotel&a=new_hoteles">
                                 <div class="block-content block-content-full clearfix border-black-op-b border-3x">
                                     <div class="float-left mt-10 d-none d-sm-block">
                                         <i class="si si-trophy fa-3x text-earth-light"></i>
                                     </div>
                                     
-                                    <div class="font-size-sm font-w600 text-uppercase text-white-op">Hotel</div>
+                                    <div class="font-size-sm font-w600 text-uppercase text-white-op">Agregar Hotel</div>
                                 </div>
                             </a>
                         </div>
                         <div class="col-6 col-xl-3">
-                            <a class="block block-link-pop text-right bg-elegance" href="javascript:void(0)">
+                            <a class="block block-link-pop text-right bg-elegance" href="index.php?c=Vuelo&a=new_vuelos">
                                 <div class="block-content block-content-full clearfix border-black-op-b border-3x">
                                     <div class="float-left mt-10 d-none d-sm-block">
                                         <i class="si si-envelope-letter fa-3x text-elegance-light"></i>
                                     </div>
                                     
-                                    <div class="font-size-sm font-w600 text-uppercase text-white-op">Vuelo</div>
+                                    <div class="font-size-sm font-w600 text-uppercase text-white-op">Agregar Vuelo</div>
                                 </div>
                             </a>
                         </div>
                         <div class="col-6 col-xl-3">
-                            <a class="block block-link-pop text-right bg-corporate" href="javascript:void(0)">
+                            <a class="block block-link-pop text-right bg-corporate" href="index.php?c=Paquetes&a=new_paquetes">
                                 <div class="block-content block-content-full clearfix border-black-op-b border-3x">
                                     <div class="float-left mt-10 d-none d-sm-block">
                                         <i class="si si-fire fa-3x text-corporate-light"></i>
                                     </div>
                                     
-                                    <div class="font-size-sm font-w600 text-uppercase text-white-op">Paquetes</div>
+                                    <div class="font-size-sm font-w600 text-uppercase text-white-op">Agregar Paquetes</div>
                                 </div>
                             </a>
                         </div>

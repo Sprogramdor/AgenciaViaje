@@ -63,7 +63,7 @@
                                 <div class="block-content">
                                
                                     <div class="font-size-lg text-black mb-5"> 
-                                    <strong>Paquete: </strong>    <?php echo $view_cliente_paquete->nombreP;?> <br>
+                                    <strong>Paquete: </strong>    <?php $view_cliente_paquete->nombreP ?> <br>
                                 <strong>Vuelo: </strong>    <?php echo $view_cliente_paquete->aeropuerto;?> <br>
                                   <em>Origen: <?php echo $view_cliente_paquete->vuelo_o;?></em> <br>
                                   <em>Destino: <?php echo $view_cliente_paquete->Vuelo_d;?></em> <br>

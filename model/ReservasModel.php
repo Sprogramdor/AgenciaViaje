@@ -77,16 +77,17 @@ class ReservasModel
             public function selectOnePaquete($valoridc) {
 
                 $sql = "SELECT *, origenes.nombreCiudad AS vuelo_o, destinos.nombreCiudad AS Vuelo_d,
-                aerolinea.nombre AS nombre_A, cliente.nombre AS nombre_C, hotel.direccion AS ubicacion
-               FROM reservas_paquete
-               INNER JOIN cliente ON cliente.cliente_id = reservas_paquete.clientefk
-               INNER JOIN paquetes On paquetes.paquete_id = reservas_paquete.paquetefk
-               INNER JOIN vuelo ON vuelo.vuelo_id = paquetes.Pvuelo_fk
-               INNER JOIN hotel ON hotel.hotel_id = paquetes.Photel_fk
-               INNER JOIN aerolinea ON aerolinea.aerolinea_id = vuelo.aerolinea_fk
-               INNER JOIN ciudades AS origenes ON origenes.ciudades_id = vuelo.origen
-               INNER JOIN ciudades AS destinos ON destinos.ciudades_id = vuelo.destino
-                WHERE cliente_id = :valoridc";
+        aerolinea.nombre AS nombre_A, cliente.nombre AS nombre_C, hotel.nombre_hotel AS nombre_hotel, hotel.valoracion AS valoracion, hotel.direccion AS ubicacion
+        FROM reservas_paquete
+        INNER JOIN cliente ON cliente.cliente_id = reservas_paquete.clientefk
+        INNER JOIN paquetes ON paquetes.paquete_id = reservas_paquete.paquetefk
+        INNER JOIN vuelo ON vuelo.vuelo_id = paquetes.Pvuelo_fk
+        INNER JOIN hotel ON hotel.hotel_id = paquetes.Photel_fk
+        INNER JOIN aerolinea ON aerolinea.aerolinea_id = vuelo.aerolinea_fk
+        INNER JOIN ciudades AS origenes ON origenes.ciudades_id = vuelo.origen
+        INNER JOIN ciudades AS destinos ON destinos.ciudades_id = vuelo.destino
+        WHERE cliente_id = :valoridc";
+
         
                 // preparar la sentencia
                 $stmt = $this->con->prepare($sql);
@@ -121,14 +122,7 @@ class ReservasModel
     } 
 
     public function get_reservas_paquete(){
-   /*      $sql ="SELECT *, origenes.nombreCiudad AS vOrigen, destinos.nombreCiudad AS vDestino,
-           Clientes.nombre AS nCliente
-           FROM `reservas_paquete` 
-           INNER JOIN paquete ON paquete.paquete_id = reservas_paquete.paquetefk
-           INNER JOIN cliente AS clientes ON clientes.cliente_id = reservas_paquete.cliente_FK
-           INNER JOIN aerolinea ON aerolinea.aerolinea_id = vuelo.aerolinea_fk
-           INNER JOIN ciudades AS origenes ON origenes.ciudades_id = vuelo.origen
-           INNER JOIN ciudades AS destinos ON destinos.ciudades_id = vuelo.destino";  */
+ 
            $sql="SELECT *, origenes.nombreCiudad AS vOrigen, destinos.nombreCiudad AS vDestino,
            Clientes.nombre AS nCliente
            FROM `reservas_paquete` 
@@ -234,10 +228,7 @@ class ReservasModel
 
     
    
-      
-
-
-            public function insert_reservaV($reservavuelo) {
+public function insert_reservaV($reservavuelo) {
                 try{
                 $sql = "INSERT INTO `reservas_vuelo` (`vuelo_fk`,`cliente_FK`) 
                 VALUES(:vfk,:cfk)";
@@ -246,7 +237,7 @@ class ReservasModel
                 $stmt = $this->con->prepare($sql);
                 $data =[
                     'cfk'=> $reservavuelo->getClienteFK(),
-                    'vfk'=> $reservavuelo->getVueloFk()
+                    'vfk'=> $reservavuelo->getPaqueteFk()
                 ];
                 // Ejecutar la sentencia
                 $stmt->execute($data);
@@ -260,13 +251,32 @@ class ReservasModel
                     return false;
                 }
                     return true;          
-                    }
+}
 
-
-
-
-
-
+public function insert_reservaP($reservap) {
+    try{
+    $sql = "INSERT INTO `reservas_paquete` ( `clientefk`, `paquetefk`) 
+    VALUES(:cfk,:pfk)";
+            
+    // Preparar la sentencia
+    $stmt = $this->con->prepare($sql);
+    $data =[
+        'cfk'=> $reservap->getClienteFK(),
+        'pfk'=> $reservap->getPaqueteFk()
+    ];
+    // Ejecutar la sentencia
+    $stmt->execute($data);
+    
+    if ($stmt->rowCount() <= 0) {// verificar si se inserto 
+        //rowCount permite obtner el numero de filas afectadas
+        return false;
+    }
+    }catch(Exception $e){
+        echo $e->getMessage();
+        return false;
+    }
+        return true;          
+}
 
 
 

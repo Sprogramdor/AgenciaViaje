@@ -4,6 +4,7 @@ require_once 'model/ReservasModel.php';
 require_once 'controller/ClientesController.php';
 require_once 'model/Dto/reservashotel.php';
 require_once 'model/Dto/reservavuelo.php';
+require_once 'model/Dto/reservapaquete.php';
 class ReservasController
 {
     private $model;
@@ -71,7 +72,7 @@ class ReservasController
     if (!$exito) {
         $msj = "Ingrese los datos correctamente";
         $icon = 'error';
-       // header('Location:index.php?c=Reservas&a=view_servicios_reservas&msj='.$msj);
+
          
       }
 
@@ -102,8 +103,7 @@ class ReservasController
     if (!$exito) {
         $msj = "Ingrese los datos correctamente";
         $icon = 'error';
-       // header('Location:index.php?c=Reservas&a=view_servicios_reservas&msj='.$msj);
-       //var_dump( $reservavuelo);
+      
       }
 
       else{
@@ -123,18 +123,39 @@ class ReservasController
 
     }
 
-    public function new_reservaP()
-    {
-       /*$reservahotel = new servicios_reservas_hotel();
-        $reservahotel ->setRreservaFK($_POST['nombre']); 
-        $reservahotel ->setHotelFK($_GET['hid']);// ID hotel */
-
-        /* FUncion para ver la factura */
-//$view_cliente_paquete = $this->model->selectOnePaquete($valoridc); //ID para el cliente y consultar para factura
-        /* ---------- */
+    public function new_reservaP()  
+    {$valoridc = $_SESSION['idCliente'];
+      
+        $reservap = new reservapaquete();
+        $reservap->setclienteFK($valoridc); 
+        $reservap->setPaqueteFK($_GET['idP']);// ID paquete 
+        $exito = $this->model->insert_reservaP($reservap);
+        
+        $view_cliente_paquete = $this->model->selectOnePaquete($valoridc); //ID para el cliente y consultar para factura
+       
         //Crear objeto reserva hotel  
         //cambiar directamente a factura wuw
-        require_once 'view/Reservas/Reservas_factura.php';
+        
+
+        $exito = $this->model->insert_reservaV($reservap);
+       
+       
+    if (!$exito) {
+        $msj = "Ingrese los datos correctamente";
+        $icon = 'error';
+      
+      }
+
+      else{
+       
+        $msj = 'Guardado exitosamente';
+        $icon ='success';
+       require_once 'view/Reservas/Reservas_facturaPaquete.php';
+      }
+
+      $_SESSION['m_crear_usuario'] = $msj;
+      $_SESSION['m_icon_interesado'] = $icon;
+      
 
     }
 
