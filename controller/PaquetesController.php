@@ -67,6 +67,47 @@ class PaquetesController
     
     }
 
+
+    public function Lista_paquetesC(){
+    
+        $datos=$this->model->get_paquetes();
+    
+        $data= Array();
+        foreach($datos as $row){
+            $sub_array = array();
+            $sub_array[] = $row["nombreP"];
+            $sub_array[] = $row["nombre"];
+            $sub_array[] = $row["nombre_hotel"];
+            $sub_array[] = $row["precio"];
+            $sub_array[] = 
+            '<div class="btn-group btn-group-sm">
+                
+            <a class="btn btn-alt-primary" 
+                href="index.php?c=Reservas&a=new_reservaP&idP='.$row['paquete_id'].'">
+                    &nbsp;Reservar
+                </a> 
+            </div>';
+           /* <a class="btn btn-alt-primary" 
+                href="index.php?c=Paquetes&a=view_Editar&paquete_edit='.$row['paquete_id'].'">
+                    <i class="fa fa-edit mr-5"></i>&nbsp;Editar
+                </a> */
+           $data[]=$sub_array; 
+           
+         
+        }
+        $results = array(
+            "sEcho"=>1,
+            "iTotalRecords"=>count($data),
+            "iTotalDisplayRecords"=>count($data),
+            "aaData"=>$data);
+           /*  var_dump($results); */
+        echo $json = json_encode($results); 
+    
+    }
+
+
+
+
     public function register_paquete() {
         $paquete_model = new paquete(); // llamar a las entidades de la clase usuarios
         // lectura de parametros

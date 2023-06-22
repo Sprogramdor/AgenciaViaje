@@ -114,6 +114,42 @@ class VueloController
      
     }
 
+
+    public function Lista_vuelosC(){
+    
+        $datos=$this->model->get_vuelo();
+    
+        $data= Array();
+        foreach($datos as $row){
+            $sub_array = array();
+            $sub_array[] = $row["nombre"];
+            $sub_array[] = $row["origen"];
+            $sub_array[] = $row["nombreCiudad"];
+            $sub_array[] = $row["precio"];
+            $sub_array[] = $row["fecha"];
+            $sub_array[] = 
+            '<div class="btn-group btn-group-sm">
+                <a class="btn btn-alt-primary" 
+                href="index.php?c=Reservas&a=new_reservaV&idv='.$row['vuelo_id'].'">
+                    &nbsp;Reservar
+                </a>
+            </div>';
+            
+           $data[]=$sub_array; 
+           
+         
+        }
+        $results = array(
+            "sEcho"=>1,
+            "iTotalRecords"=>count($data),
+            "iTotalDisplayRecords"=>count($data),
+            "aaData"=>$data);
+           /*  var_dump($results); */
+           
+        echo $json = json_encode($results); 
+    
+     
+    }
     public function register_vuelo() {
         $vuelo_model = new vuelo(); // llamar a las entidades de la clase usuarios
         // lectura de parametros

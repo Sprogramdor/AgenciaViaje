@@ -167,8 +167,12 @@ class HotelController
             '<div class="btn-group btn-group-sm">
                 <a class="btn btn-alt-primary" 
                 href="index.php?c=Reservas&a=new_reservaH&hid='.$row['hotel_id'].'">
-                &nbsp;Resevar
+                
+                 &nbsp;Resevar
                 </a>
+
+               
+                
             </div>';
            
            $data[]=$sub_array; 

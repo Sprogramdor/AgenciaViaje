@@ -85,16 +85,15 @@ class ReservasModel
     }
     
 
-    public function insert_reserva($reserva_DAO) {
+    public function insert_reservaH($reservahotel) {
         try{
-        $sql = "INSERT INTO `reserva` (`cliente_FK`, `agente_Fk`)
-                VALUES (:cfk ,:afk)";
+        $sql = "INSERT INTO `reservas_hotel` (`cliente_FK`,`RHhotel_fk`) VALUES(:cfk,:hfk)";
                 
         // Preparar la sentencia
         $stmt = $this->con->prepare($sql);
         $data =[
-            'cfk'=> $reserva_DAO->getClienteFK(),
-            'afk'=> $reserva_DAO->getAgenteFK()
+            'cfk'=> $reservahotel->getClienteFK(),
+            'hfk'=> $reservahotel->getRHhotelFk()
         ];
         // Ejecutar la sentencia
         $stmt->execute($data);

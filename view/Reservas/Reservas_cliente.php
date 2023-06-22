@@ -28,22 +28,29 @@
         <div class="col-md-6 col-xl-6">
 
             <label class="col-lg-12 col-form-label" for="cliente_existente">Seleccione al cliente registrado <span class="text-danger">*</span></label>
+            <form class="js-validation-bootstrap" action="index.php?c=Reservas&a=view_servicios_reservas" method="post">
                     <div class="col-lg-8">
+                    
                     <select class="js-select2 form-control" id="cliente_existente" name="cliente_existente" style="width: 100%;" data-placeholder="Digite el destino..">
-                     <option value="">Selecione una opcion</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>                    
+                    <option value="0">Elige una opción</option>
+                    <?php foreach ($cliente as $cl) { ?>
+                        <option value="<?php echo $cl['cliente_id']; ?>">
+                            <?php echo $cl['nombre'] . ' ' . $cl['Apellido'] . ' - ' . $cl['cedula']; ?>
+                        </option>
+                    <?php } ?>
+
+                 
                     </select>
+
                     </div>
                     <br>
                     <div class="col-lg-8">
-                    <a href="index.php?c=Reservas&a=view_servicios_reservas" class="btn btn-secondary min-width-125">
-                        <i class="fa fa-arrow-circle-right">
-
-                        </i> Continuar</a>
+                    <div class="col-lg-8 ml-auto">
+                        <button type="submit" class="btn btn-alt-primary">Continuar</button>
                     </div>
                     </div>
+                    </div>
+                </form>        
         </div>      
     </div>     
         </div>  <!-- END  -->

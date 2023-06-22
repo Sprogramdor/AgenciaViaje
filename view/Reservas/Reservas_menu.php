@@ -19,7 +19,7 @@
                         
                         <!-- Row #4 -->
                         <div class="col-md-6 col-xl-3">
-                            <a class="block block-link-pop bg-success text-center" href="index.php?c=Reservas&a=servicios_reservas_hotel">
+                            <a class="block block-link-pop bg-success text-center" href="index.php?c=Reservas&a=servicios_reservas_hotel&idC=<?php echo $idC; ?>">
                                 <div class="block-content block-content-full">
                                     <img class="img-avatar img-avatar-thumb" src="public/assets/img/h.png" alt="">
                                 </div>
