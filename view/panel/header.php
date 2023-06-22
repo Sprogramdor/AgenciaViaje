@@ -31,6 +31,14 @@
         <meta property="og:url" content="">
         <meta property="og:image" content="">
 
+
+ 
+ <link href="DataTables/datatables.min.css" rel="stylesheet"/>
+ 
+ <script src="DataTables/datatables.min.js"></script>
+
+
+
         <!-- Icons -->
         <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
         <link rel="shortcut icon" href="public/assets/img/favicons/favicon.png">
@@ -44,11 +52,12 @@
 
         <!-- Page JS Plugins CSS -->
         
-        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-        <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-    <!--     <link rel="stylesheet" href="public/assets/js/plugins/datatables/dataTables.bootstrap4.min.css"> -->
+      <!--   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"> -->
 
-       
+
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -75,24 +84,7 @@
 
                         
 
-                        <!-- Layout Options (used just for demonstration) -->
-                        <!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-circle btn-dual-secondary" id="page-header-options-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-wrench"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="page-header-options-dropdown">
-                                <h6 class="dropdown-header">Header</h6>
-                                <button type="button" class="btn btn-sm btn-block btn-alt-secondary" data-toggle="layout" data-action="header_fixed_toggle">Fixed Mode</button>
-                                <button type="button" class="btn btn-sm btn-block btn-alt-secondary d-none d-lg-block mb-10" data-toggle="layout" data-action="header_style_classic">Classic Style</button>
-                                <div class="d-none d-xl-block">
-                                    <h6 class="dropdown-header">Main Content</h6>
-                                    <button type="button" class="btn btn-sm btn-block btn-alt-secondary mb-10" data-toggle="layout" data-action="content_layout_toggle">Toggle Layout</button>
-                                </div>
-                                <div class="dropdown-divider"></div>
-                                
-                            </div>
-                        </div>
+                        
                         <!-- END Layout Options -->
 
                         <!-- Color Themes (used just for demonstration) -->

@@ -173,6 +173,59 @@ class ReservasController
      
     }
 
+    public function Lista_reservas_vuelo(){
+    
+        $datos=$this->model->get_reservas_vuelo();
+    
+        $data= Array();
+        foreach($datos as $row){
+            $sub_array = array();
+            $sub_array[] = $row["nCliente"];
+            $sub_array[] = $row["Apellido"];
+            $sub_array[] = $row["cedula"];  
+            $sub_array[] = $row["nombre"];
+            $sub_array[] = $row["vOrigen"];
+            $sub_array[] = $row["nombreCiudad"];
+            $sub_array[] = $row["precio"];
+            $sub_array[] = $row["fecha"];
+           
+           $data[]=$sub_array;  
+        }
+        $results = array(
+            "sEcho"=>1,
+            "iTotalRecords"=>count($data),
+            "iTotalDisplayRecords"=>count($data),
+            "aaData"=>$data);
+           /*  var_dump($results); */
+        echo $json = json_encode($results); 
+    }
+
+    public function Lista_reservas_paquete(){
+    
+        $datos=$this->model->get_reservas_paquete();
+    
+        $data= Array();
+        foreach($datos as $row){
+            $sub_array = array();
+            $sub_array[] = $row["nCliente"];
+            $sub_array[] = $row["Apellido"];
+            $sub_array[] = $row["cedula"];  
+            $sub_array[] = $row["nombreP"];
+            $sub_array[] = $row["nombre"];
+            $sub_array[] = $row["nombre_hotel"];
+            $sub_array[] = $row["precio"];
+           
+           $data[]=$sub_array;  
+        }
+        $results = array(
+            "sEcho"=>1,
+            "iTotalRecords"=>count($data),
+            "iTotalDisplayRecords"=>count($data),
+            "aaData"=>$data);
+           /*  var_dump($results); */
+        echo $json = json_encode($results); 
+    }
+
 
 
 
