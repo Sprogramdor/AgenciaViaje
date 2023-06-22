@@ -33,7 +33,7 @@
                             </a>
                         </div>
                         <div class="col-md-6 col-xl-3">
-                            <a class="block block-link-pop bg-elegance text-center" href="index.php?c=Reservas&a=servicios_reservas_vuelo">
+                            <a class="block block-link-pop bg-elegance text-center" href="index.php?c=Reservas&a=servicios_reservas_vuelo&idC=<?php echo $idC; ?>">
                                 <div class="block-content block-content-full">
                                     <img class="img-avatar img-avatar-thumb" src="public/assets/img/vue.png" alt="">
                                    
@@ -48,7 +48,7 @@
                             </a>
                         </div>
                         <div class="col-md-6 col-xl-3">
-                            <a class="block block-link-pop bg-corporate text-center" href="index.php?c=Reservas&a=servicios_reservas_paquete">
+                            <a class="block block-link-pop bg-corporate text-center" href="index.php?c=Reservas&a=servicios_reservas_paquete&idC=<?php echo $idC; ?>">
                                 <div class="block-content block-content-full">
                                     <img class="img-avatar img-avatar-thumb" src="public/assets/img/paq.png" alt="">
                                 </div>

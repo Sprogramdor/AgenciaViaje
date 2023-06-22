@@ -166,7 +166,30 @@ class ReservasModel
       
 
 
-
+            public function insert_reservaV($reservavuelo) {
+                try{
+                $sql = "INSERT INTO `reservas_vuelo` (`vuelo_fk`,`cliente_FK`) 
+                VALUES(:vfk,:cfk)";
+                        
+                // Preparar la sentencia
+                $stmt = $this->con->prepare($sql);
+                $data =[
+                    'vfk'=> $reservavuelo->getClienteFK(),
+                    'cfk'=> $reservavuelo->getVueloFk()
+                ];
+                // Ejecutar la sentencia
+                $stmt->execute($data);
+                
+                if ($stmt->rowCount() <= 0) {// verificar si se inserto 
+                    //rowCount permite obtner el numero de filas afectadas
+                    return false;
+                }
+                }catch(Exception $e){
+                    echo $e->getMessage();
+                    return false;
+                }
+                    return true;          
+                    }
 
 
 

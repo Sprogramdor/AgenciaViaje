@@ -3,8 +3,7 @@
 require_once 'model/ReservasModel.php'; 
 require_once 'controller/ClientesController.php';
 require_once 'model/Dto/reservashotel.php';
-
-
+require_once 'model/Dto/reservavuelo.php';
 class ReservasController
 {
     private $model;
@@ -90,13 +89,32 @@ class ReservasController
 
     public function new_reservaV()
     {
-       /*$reservahotel = new servicios_reservas_hotel();
-        $reservahotel ->setRreservaFK($_POST['nombre']); 
-        $reservahotel ->setHotelFK($_GET['hid']);// ID hotel */
+        $reservavuelo = new reservavuelo();
+        $valoridc = $_SESSION['idCliente'];
+        $reservavuelo ->setClienteFK($valoridc); 
+        $reservavuelo ->setVueloFK($_GET['idv']);// ID vuelo */
+         
+        $exito = $this->model->insert_reservaV($reservavuelo);
+    if (!$exito) {
+        $msj = "Ingrese los datos correctamente";
+        $icon = 'error';
+       // header('Location:index.php?c=Reservas&a=view_servicios_reservas&msj='.$msj);
+       var_dump( $reservavuelo);
+      }
 
-        //Crear objeto reserva hotel  
-        //cambiar directamente a factura wuw
-        require_once 'view/Reservas/Reservas_factura.php';
+      else{
+       
+        $msj = 'Guardado exitosamente';
+        $icon ='success';
+        echo "guardo";
+        var_dump( $reservavuelo);
+         //require_once 'view/Reservas/Reservas_factura.php';
+      }
+
+      $_SESSION['m_crear_usuario'] = $msj;
+      $_SESSION['m_icon_interesado'] = $icon;
+      
+      
 
     }
 
@@ -128,12 +146,14 @@ class ReservasController
     }
     public function servicios_reservas_vuelo()
     {//Mostrar todos los Servicios disponibles 
+        $idC=$_GET['idC'] ;
         require_once 'view/Vuelo/Vuelo_listC.php';
           
     }
 
     public function servicios_reservas_paquete()
     {//Mostrar todos los Servicios disponibles 
+        $idC=$_GET['idC'] ;
         require_once 'view/Paquetes/Paquete_listC.php';
           
     }
