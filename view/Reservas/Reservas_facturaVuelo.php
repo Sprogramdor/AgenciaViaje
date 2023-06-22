@@ -21,13 +21,13 @@
 
             <div class="block-content">
                 <div class="font-size-lg text-black mb-5">
-                <strong>Cédula: </strong><?php echo $view_cliente->cedula;?>
+                <strong>Cédula: </strong><?php echo $view_cliente_vuelo->cedula;?>
                 <br>
-                <strong>Nombres: </strong><?php echo $view_cliente->nombre;?> <br>
-                <strong>Apellidos: </strong><?php echo $view_cliente->Apellido;?> <br>
-                    <strong>Correo: </strong>          <?php echo $view_cliente->Correo;?><br>
-                    <strong>Telefono: </strong>            <?php echo $view_cliente->telefono;?><br>
-                    <strong>Direccion: </strong>             <?php echo $view_cliente->Direccion;?><br><br>                                    
+                <strong>Nombres: </strong><?php echo $view_cliente_vuelo->nombre_C;?> <br>
+                <strong>Apellidos: </strong><?php echo $view_cliente_vuelo->Apellido;?> <br>
+                    <strong>Correo: </strong>          <?php echo $view_cliente_vuelo->Correo;?><br>
+                    <strong>Telefono: </strong>            <?php echo $view_cliente_vuelo->telefono;?><br>
+                    <strong>Direccion: </strong>             <?php echo $view_cliente_vuelo->Direccion;?><br><br>                                    
                     </div>
                                 </div>
                             </div>
@@ -63,16 +63,17 @@
                                 <div class="block-content">
                                
                                     <div class="font-size-lg text-black mb-5"> 
-                                    <strong>Hotel: </strong>    <?php echo $view_cliente->nombre_hotel;?> <br>
-                                <strong>Valoración de estrellas: </strong>    <?php echo $view_cliente->valoracion;?> <br>
-                                <strong>Ubicación: </strong>    <?php echo $view_cliente->direccion;?> <br>
-                                <strong>Ciudad: </strong>    <?php echo $view_cliente->nombreCiudad;?> <br>          
+                                    <strong>Aerolinea: </strong>    <?php echo $view_cliente_vuelo->nombre_A;?> <br>
+                                <strong>Aeropuerto: </strong>    <?php echo $view_cliente_vuelo->aeropuerto;?> <br>
+                                <strong>Origen: </strong>    <?php echo $view_cliente_vuelo->vuelo_o;?> <br>
+                                <strong>Destino: </strong>    <?php echo $view_cliente_vuelo->Vuelo_d;?> <br> 
+                                <strong>Fecha de partida: </strong>    <?php echo $view_cliente_vuelo->fecha;?> <br>         
                                        </div>
                                        <br><br>
                                     <address style="font-size:20px; font-weight:bold;">
-                                        Precio ----------------------------$<?php echo $view_cliente->precioNoche;?><br>
-                                        SubTotal -------------------------$<?php echo $view_cliente->precioNoche;?><br>
-                                        Total  ----------------------------$<?php echo $view_cliente->precioNoche;?><br>
+                                        Precio ----------------------------$<?php echo $view_cliente_vuelo->precio;?><br>
+                                        SubTotal -------------------------$<?php echo $view_cliente_vuelo->precio;?><br>
+                                        Total  ----------------------------$<?php echo $view_cliente_vuelo->precio;?><br>
                           
                                     </address>
                                 </div>

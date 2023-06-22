@@ -21,13 +21,13 @@
 
             <div class="block-content">
                 <div class="font-size-lg text-black mb-5">
-                <strong>Cédula: </strong><?php echo $view_cliente->cedula;?>
+                <strong>Cédula: </strong><?php echo $view_cliente_paquete->cedula;?>
                 <br>
-                <strong>Nombres: </strong><?php echo $view_cliente->nombre;?> <br>
-                <strong>Apellidos: </strong><?php echo $view_cliente->Apellido;?> <br>
-                    <strong>Correo: </strong>          <?php echo $view_cliente->Correo;?><br>
-                    <strong>Telefono: </strong>            <?php echo $view_cliente->telefono;?><br>
-                    <strong>Direccion: </strong>             <?php echo $view_cliente->Direccion;?><br><br>                                    
+                <strong>Nombres: </strong><?php echo $view_cliente_paquete->nombre_C;?> <br>
+                <strong>Apellidos: </strong><?php echo $view_cliente_paquete->Apellido;?> <br>
+                    <strong>Correo: </strong>          <?php echo $view_cliente_paquete->Correo;?><br>
+                    <strong>Telefono: </strong>            <?php echo $view_cliente_paquete->telefono;?><br>
+                    <strong>Direccion: </strong>             <?php echo $view_cliente_paquete->Direccion;?><br><br>                                    
                     </div>
                                 </div>
                             </div>
@@ -63,16 +63,20 @@
                                 <div class="block-content">
                                
                                     <div class="font-size-lg text-black mb-5"> 
-                                    <strong>Hotel: </strong>    <?php echo $view_cliente->nombre_hotel;?> <br>
-                                <strong>Valoración de estrellas: </strong>    <?php echo $view_cliente->valoracion;?> <br>
-                                <strong>Ubicación: </strong>    <?php echo $view_cliente->direccion;?> <br>
-                                <strong>Ciudad: </strong>    <?php echo $view_cliente->nombreCiudad;?> <br>          
+                                    <strong>Paquete: </strong>    <?php echo $view_cliente_paquete->nombreP;?> <br>
+                                <strong>Vuelo: </strong>    <?php echo $view_cliente_paquete->aeropuerto;?> <br>
+                                  <em>Origen: <?php echo $view_cliente_paquete->vuelo_o;?></em> <br>
+                                  <em>Destino: <?php echo $view_cliente_paquete->Vuelo_d;?></em> <br>
+                                <strong>Hotel : </strong>    <?php echo $view_cliente_paquete->nombre_hotel;?> <br> 
+                                  <em>Valoración: <?php echo $view_cliente_paquete->valoracion;?></em>
+                                  <em>Ubicación:  <?php echo $view_cliente_paquete->ubicacion;?></em>
+                               
                                        </div>
                                        <br><br>
                                     <address style="font-size:20px; font-weight:bold;">
-                                        Precio ----------------------------$<?php echo $view_cliente->precioNoche;?><br>
-                                        SubTotal -------------------------$<?php echo $view_cliente->precioNoche;?><br>
-                                        Total  ----------------------------$<?php echo $view_cliente->precioNoche;?><br>
+                                        Precio ----------------------------$<?php echo $view_cliente_paquete->precio;?><br>
+                                        SubTotal -------------------------$<?php echo $view_cliente_paquete->precio;?><br>
+                                        Total  ----------------------------$<?php echo $view_cliente_paquete->precio;?><br>
                           
                                     </address>
                                 </div>

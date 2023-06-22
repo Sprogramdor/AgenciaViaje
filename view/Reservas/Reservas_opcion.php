@@ -8,8 +8,8 @@
                        
       <h3 class="block-title mb-3">Selecione el proceso de reserva a realizar</h3>
                                 
-    <div class="row gutters-tiny text-center" style="padding-left: 150px;padding-right: 150px;">
-        <div class="col-6" style="    padding-left: 20px; padding-right: 20px;">
+    <div class="row gutters-tiny text-center" style="padding-left: 50px;padding-right: 50px;">
+        <div class="col-6" style="    padding-left: 50px; padding-right: 50px;">
         
             <a class="block block-transparent text-center bg-earth" href="index.php?c=Reservas&a=new_reservas">
                 <div class="block-content bg-black-op-5">
@@ -23,7 +23,7 @@
             </a>
         </div>
 
-        <div class="col-6" style="padding-left: 20px;padding-right: 20px;">
+        <div class="col-6" style="padding-left: 50px;padding-right: 50px;">
             <a class="block block-transparent text-center bg-corporate" href="index.php?c=Reservas&a=existente_reservas">
                 <div class="block-content bg-black-op-5">
                     <p class="font-w600 text-white">Cliente Existente</p>

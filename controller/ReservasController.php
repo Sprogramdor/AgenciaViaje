@@ -66,6 +66,8 @@ class ReservasController
         $reservahotel ->setRHhotelFk($_GET['hid']);// ID hotel */
          
         $exito = $this->model->insert_reservaH($reservahotel);
+        $view_cliente = $this->model->selectOne($valoridc); //ID para el cliente y consultar para factura
+
     if (!$exito) {
         $msj = "Ingrese los datos correctamente";
         $icon = 'error';
@@ -95,6 +97,8 @@ class ReservasController
         $reservavuelo ->setVueloFK($_GET['idv']);// ID vuelo */
          
         $exito = $this->model->insert_reservaV($reservavuelo);
+        $view_cliente_vuelo = $this->model->selectOneVuelo($valoridc); //ID para el cliente y consultar para factura
+       
     if (!$exito) {
         $msj = "Ingrese los datos correctamente";
         $icon = 'error';
@@ -106,9 +110,10 @@ class ReservasController
        
         $msj = 'Guardado exitosamente';
         $icon ='success';
+        
        // echo "guardo";
        // var_dump( $reservavuelo);
-        require_once 'view/Reservas/Reservas_factura.php';
+        require_once 'view/Reservas/Reservas_facturaVuelo.php';
       }
 
       $_SESSION['m_crear_usuario'] = $msj;
@@ -124,6 +129,9 @@ class ReservasController
         $reservahotel ->setRreservaFK($_POST['nombre']); 
         $reservahotel ->setHotelFK($_GET['hid']);// ID hotel */
 
+        /* FUncion para ver la factura */
+//$view_cliente_paquete = $this->model->selectOnePaquete($valoridc); //ID para el cliente y consultar para factura
+        /* ---------- */
         //Crear objeto reserva hotel  
         //cambiar directamente a factura wuw
         require_once 'view/Reservas/Reservas_factura.php';

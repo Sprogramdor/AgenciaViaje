@@ -17,7 +17,7 @@ class ReservasModel
         $sql = "SELECT * FROM `reservas_hotel` 
         INNER JOIN hotel ON hotel.hotel_id = reservas_hotel.RHhotel_fk
                 INNER JOIN cliente ON cliente.cliente_id = reservas_hotel.cliente_FK 
-                INNER JOIN ciudades ON ciudades.ciudades_id = cliente.Ciudad_FK";  
+                INNER JOIN ciudades ON ciudades.ciudades_id = hotel.ciudadhotel";  
         // preparar la sentencia
         $stmt = $this->con->prepare($sql);
        
@@ -28,6 +28,77 @@ class ReservasModel
         //retornar resultados
         return $resultado;
     } 
+
+    public function selectOne($valoridc) {
+
+        $sql = "SELECT *
+        FROM reservas_hotel
+        INNER JOIN cliente ON cliente.cliente_id = reservas_hotel.cliente_FK
+        INNER JOIN hotel ON hotel.hotel_id = reservas_hotel.RHhotel_fk
+        INNER JOIN ciudades ON ciudades.ciudades_id = hotel.ciudadhotel
+        WHERE cliente_id = :valoridc";
+
+        // preparar la sentencia
+        $stmt = $this->con->prepare($sql);
+        $data = ['valoridc' => $valoridc];
+        // ejecutar la sentencia
+        $stmt->execute($data);
+        // recuperar los datos (en caso de select)
+        $view_cliente = $stmt->fetch(PDO::FETCH_OBJ);
+        /* $user = $stmt->fetchAll(PDO::FETCH_ASSOC); */// fetch retorna el primer registro
+        // retornar resultados
+         return $view_cliente;  
+        }
+
+        public function selectOneVuelo($valoridc) {
+
+            $sql = "SELECT *, origenes.nombreCiudad AS vuelo_o, destinos.nombreCiudad AS Vuelo_d,
+             aerolinea.nombre AS nombre_A, cliente.nombre AS nombre_C
+            FROM reservas_vuelo
+            INNER JOIN cliente ON cliente.cliente_id = reservas_vuelo.cliente_fk
+            INNER JOIN vuelo ON vuelo.vuelo_id = reservas_vuelo.vuelo_fk
+            INNER JOIN aerolinea ON aerolinea.aerolinea_id = vuelo.aerolinea_fk
+            INNER JOIN ciudades AS origenes ON origenes.ciudades_id = vuelo.origen
+            INNER JOIN ciudades AS destinos ON destinos.ciudades_id = vuelo.destino
+            WHERE cliente_id = :valoridc";
+    
+            // preparar la sentencia
+            $stmt = $this->con->prepare($sql);
+            $data = ['valoridc' => $valoridc];
+            // ejecutar la sentencia
+            $stmt->execute($data);
+            // recuperar los datos (en caso de select)
+            $view_cliente = $stmt->fetch(PDO::FETCH_OBJ);
+            /* $user = $stmt->fetchAll(PDO::FETCH_ASSOC); */// fetch retorna el primer registro
+            // retornar resultados
+             return $view_cliente;  
+            }
+
+            public function selectOnePaquete($valoridc) {
+
+                $sql = "SELECT *, origenes.nombreCiudad AS vuelo_o, destinos.nombreCiudad AS Vuelo_d,
+                aerolinea.nombre AS nombre_A, cliente.nombre AS nombre_C, hotel.direccion AS ubicacion
+               FROM reservas_paquete
+               INNER JOIN cliente ON cliente.cliente_id = reservas_paquete.clientefk
+               INNER JOIN paquetes On paquetes.paquete_id = reservas_paquete.paquetefk
+               INNER JOIN vuelo ON vuelo.vuelo_id = paquetes.Pvuelo_fk
+               INNER JOIN hotel ON hotel.hotel_id = paquetes.Photel_fk
+               INNER JOIN aerolinea ON aerolinea.aerolinea_id = vuelo.aerolinea_fk
+               INNER JOIN ciudades AS origenes ON origenes.ciudades_id = vuelo.origen
+               INNER JOIN ciudades AS destinos ON destinos.ciudades_id = vuelo.destino
+                WHERE cliente_id = :valoridc";
+        
+                // preparar la sentencia
+                $stmt = $this->con->prepare($sql);
+                $data = ['valoridc' => $valoridc];
+                // ejecutar la sentencia
+                $stmt->execute($data);
+                // recuperar los datos (en caso de select)
+                $view_cliente = $stmt->fetch(PDO::FETCH_OBJ);
+                /* $user = $stmt->fetchAll(PDO::FETCH_ASSOC); */// fetch retorna el primer registro
+                // retornar resultados
+                 return $view_cliente;  
+                }
 
     public function get_reservas_vuelo(){
              $sql ="SELECT *, origenes.nombreCiudad AS vOrigen, destinos.nombreCiudad AS vDestino,
