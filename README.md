@@ -1,7 +1,8 @@
 
 # Sistema de Gestión de Reservas de Viajes
 
-## Equipo
+## Equipo de Desarrollo
+- [Jesús Acosta  - Ingeniero de Software ](https://github.com/Sprogramdor)
 - [Edwin Paúl Chilan - Ingeniero de Sistemas Computacionales](https://github.com/Harudl)
 
 ## Descripción
