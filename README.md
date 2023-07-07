@@ -4,8 +4,11 @@
 ## Equipo
 - [Edwin Paúl Chilan - Ingeniero de Sistemas Computacionales](https://github.com/Harudl)
 
-
+## Descripción
 Este repositorio contiene un Sistema de Gestión de Reservas de Viajes que permite a los agentes realizar diversas funciones relacionadas con la administración de reservas, clientes y servicios.
+
+## Video demo 
+https://youtu.be/5C8ZZHniOAI  
 
 ## Funciones principales
 
